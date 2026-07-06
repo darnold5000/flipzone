@@ -24,9 +24,9 @@ export default function FAQPage() {
 
       <BannerHero
         src={images.faqHero}
-        alt="We're Here For You — have questions or ready to get started at The Flip Zone"
+        alt="Frequently Asked Questions — We're Here to Help at The Flip Zone"
         width={1024}
-        height={153}
+        height={237}
       />
 
       <section className="section-padding">

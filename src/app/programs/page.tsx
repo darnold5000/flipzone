@@ -17,9 +17,9 @@ export default function ProgramsPage() {
     <>
       <BannerHero
         src={images.programsHero}
-        alt="More Than Just a Gym — building confidence, strength, and friendships since 2007 in Plainfield, Indiana"
+        alt="Programs for Every Stage — from first steps to competitive excellence at The Flip Zone"
         width={1024}
-        height={169}
+        height={231}
       />
 
       <ClassFinder />

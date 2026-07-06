@@ -1,4 +1,4 @@
-import { PageHero } from "@/components/PageHero";
+import { BannerHero } from "@/components/BannerHero";
 import { LocationMap } from "@/components/LocationMap";
 import { CTA } from "@/components/CTA";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import {
   MailLetterIcon,
   PhoneCallIcon,
 } from "@/components/icons/ContactLinkIcons";
+import { images } from "@/lib/images";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
@@ -21,13 +22,11 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        seed="contact"
-        title="Get in Touch"
-        subtitle="We'd love to hear from you"
-        size="medium"
-        showButtons={false}
-        align="center"
+      <BannerHero
+        src={images.faqHero}
+        alt="We're Here to Help — have questions or ready to get started at The Flip Zone"
+        width={1024}
+        height={237}
       />
 
       <section className="section-padding">
