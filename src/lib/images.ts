@@ -8,6 +8,11 @@ export function wixImage(
   return `https://static.wixstatic.com/media/${id}~mv2.${ext}/v1/fill/w_${width},h_${height},al_c,q_85,enc_auto/${id}~mv2.${ext}`;
 }
 
+/** Small square crop for coach avatars from theflipzone.com staff photos. */
+export function coachPhoto(id: string, ext: "jpg" | "jpeg" | "png" = "jpg", size = 160) {
+  return wixImage(id, ext, size, size);
+}
+
 export const images = {
   logo: wixImage("3c407f_f92aab5f784344a78fe846a7a2144181", "png", 400, 400),
   hero: "/images/hero-team.png",

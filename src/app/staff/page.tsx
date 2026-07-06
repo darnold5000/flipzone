@@ -26,8 +26,7 @@ export default function StaffPage() {
         <div className="container-wide">
           <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-muted-foreground">
             Our team brings expertise, passion, and personalized attention to every
-            training session. These aren&apos;t business headshots — these are coaches
-            who show up every day to help your child grow.
+            training session.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {staff.map((coach, i) => (
