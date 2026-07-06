@@ -26,42 +26,43 @@ function HeroWave() {
 
 export function AboutHero() {
   return (
-    <section className="relative flex min-h-[55vh] items-center overflow-hidden lg:min-h-[62vh]">
-      <Image
-        src={images.heroTeam}
-        alt="Flip Zone gymnasts smiling and hugging in purple leotards"
-        fill
-        priority
-        className="object-cover brightness-[1.08] contrast-[1.02] saturate-[1.06]"
-        style={{ objectPosition: "72% center" }}
-        sizes="100vw"
-      />
+    <section className="relative overflow-hidden">
+      <div className="lg:grid lg:min-h-[62vh] lg:grid-cols-[minmax(0,44%)_1fr]">
+        {/* Text panel — sits left, never over the photo */}
+        <div className="relative z-10 flex items-center bg-gradient-to-br from-flip-purple via-flip-purple to-[#3a2168] px-6 py-14 sm:px-10 lg:px-12 xl:px-16 lg:py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="max-w-lg"
+          >
+            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-white">
+              <Sparkles className="size-4 shrink-0 text-flip-teal" strokeWidth={2.25} />
+              Our Story
+            </p>
 
-      {/* Left-weighted overlay so gymnasts stay visible on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-flip-purple/85 via-flip-purple/45 to-flip-purple/5" />
-      <div className="absolute inset-0 bg-gradient-to-t from-flip-black/50 via-transparent to-flip-black/10" />
+            <h1 className="font-heading text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
+              More Than Just a{" "}
+              <span className="italic text-flip-teal">Gym</span>
+            </h1>
 
-      <div className="container-wide relative z-10 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-          className="max-w-xl"
-        >
-          <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-white">
-            <Sparkles className="size-4 text-flip-teal" strokeWidth={2.25} />
-            Our Story
-          </p>
+            <p className="mt-5 text-base leading-relaxed text-white/90 sm:text-lg">
+              {aboutStory.heroSubtitle}
+            </p>
+          </motion.div>
+        </div>
 
-          <h1 className="font-heading text-4xl font-bold leading-[1.05] text-white drop-shadow-md sm:text-5xl lg:text-6xl">
-            More Than Just a{" "}
-            <span className="italic text-flip-teal">Gym</span>
-          </h1>
-
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-white/95 drop-shadow sm:text-lg">
-            {aboutStory.heroSubtitle}
-          </p>
-        </motion.div>
+        {/* Photo — gymnasts stay on the right */}
+        <div className="relative aspect-[16/10] min-h-[280px] sm:aspect-[16/9] lg:aspect-auto lg:min-h-0">
+          <Image
+            src={images.heroTeam}
+            alt="Flip Zone gymnasts smiling and hugging in purple leotards"
+            fill
+            priority
+            className="object-cover object-[72%_center] brightness-[1.06] saturate-[1.05]"
+            sizes="(max-width: 1024px) 100vw, 56vw"
+          />
+        </div>
       </div>
 
       <HeroWave />
