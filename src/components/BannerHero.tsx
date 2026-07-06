@@ -19,6 +19,8 @@ export function BannerHero({ src, alt, width, height, priority = true }: BannerH
         className="h-auto w-full"
         priority={priority}
         sizes="100vw"
+        quality={100}
+        unoptimized
       />
     </section>
   );
