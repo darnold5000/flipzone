@@ -82,8 +82,8 @@ export function ProgramCard({
 
         <div className="flex flex-1 flex-col p-5 sm:p-6">
           <h3 className="font-heading text-xl font-bold text-flip-purple">{program.name}</h3>
-          <p className="mt-1.5 text-sm leading-snug text-muted-foreground">
-            {program.perfectFor}
+          <p className="mt-1.5 text-sm font-medium leading-snug text-flip-purple">
+            {program.tagline ?? program.perfectFor}
           </p>
 
           <div className="mt-4 flex-1">

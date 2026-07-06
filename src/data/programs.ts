@@ -14,6 +14,8 @@ export interface Program {
   ageRange: string;
   category: ProgramCategory;
   perfectFor: string;
+  /** Short punchy line for cards and program listings. */
+  tagline?: string;
   description: string;
   learnings: string[];
   benefits: string[];
@@ -32,6 +34,7 @@ export const programs: Program[] = [
     ageRange: "Ages 5 & under",
     category: "first-classes",
     perfectFor: "Little ones taking their first steps into movement and gymnastics",
+    tagline: "First cartwheels, big confidence.",
     description:
       "Our preschool program introduces young children to gymnastics in a playful, structured environment. Classes focus on coordination, listening skills, and building confidence through fun obstacle courses, beam walks, and tumbling basics.",
     learnings: [
@@ -69,6 +72,7 @@ export const programs: Program[] = [
     ageRange: "Ages 6 & up",
     category: "build-skills",
     perfectFor: "School-age kids who want to learn gymnastics skills and have fun",
+    tagline: "Learn skills. Love every class.",
     description:
       "From first-time gymnasts to intermediate athletes, our recreational program teaches vault, bars, beam, and floor in a progressive, skill-based curriculum. Girls progress through Beginner, Intermediate, and advanced levels at their own pace.",
     learnings: [
@@ -96,6 +100,7 @@ export const programs: Program[] = [
     ageRange: "Ages 6 & up",
     category: "build-skills",
     perfectFor: "Kids and teens focused on floor skills, flips, and aerials",
+    tagline: "Flip, fly, and stick the landing.",
     description:
       "Our tumbling program is perfect for cheerleaders, dancers, or anyone who wants to master floor skills. Classes range from Tumbling 1 basics through advanced back handsprings and Level 3–5 tumbling.",
     learnings: [
@@ -120,6 +125,7 @@ export const programs: Program[] = [
     ageRange: "Ages 5–12",
     category: "build-skills",
     perfectFor: "Active kids who love obstacle courses and ninja-style movement",
+    tagline: "Climb, swing, conquer the course.",
     description:
       "A combination of ninja and gymnastics skills! Coed classes use our ninja rig, obstacle courses, and gymnastics equipment to build strength, agility, and confidence in a high-energy format.",
     learnings: [
@@ -144,6 +150,7 @@ export const programs: Program[] = [
     ageRange: "By invitation / tryout",
     category: "competitive",
     perfectFor: "Dedicated gymnasts ready for competition and excellence",
+    tagline: "Train hard. Compete proud.",
     description:
       "Flip Zone is renowned for high-caliber competitive programs with success at state, regional, and national levels. We offer Preteam, USAG Compulsory, USAG Optionals, and NGA Colors programs tailored to each athlete's goals.",
     learnings: [
@@ -180,6 +187,7 @@ export const programs: Program[] = [
     ageRange: "All ages",
     category: "more-fun",
     perfectFor: "Children with special needs who want to experience gymnastics",
+    tagline: "Every child belongs in the gym.",
     description:
       "GymStars offers special needs gymnastics classes in our Recreational Training Center. Our patient, trained coaches create an inclusive environment where every child can move, play, and build confidence.",
     learnings: [
@@ -203,6 +211,7 @@ export const programs: Program[] = [
     ageRange: "Ages 3–5",
     category: "first-classes",
     perfectFor: "Families seeking a fitness-based educational preschool program",
+    tagline: "School days with daily gymnastics built in.",
     description:
       "Since 2007, Shooting Stars Gym N Learn is Hendricks County's first fitness-based educational program. PreK and 3's programs meet Mon/Wed/Fri, 9:30 AM–1:30 PM, with daily gymnastics at The Flip Zone.",
     learnings: [
@@ -249,6 +258,7 @@ export const programs: Program[] = [
     ageRange: "All ages",
     category: "competitive",
     perfectFor: "Athletes wanting one-on-one coaching for specific skills",
+    tagline: "One coach. One goal. Your pace.",
     description:
       "Private lessons offer personalized coaching tailored to your child's goals. Whether working on a specific skill, preparing for team tryouts, or accelerating progress, our coaches provide focused, individual attention.",
     learnings: [
@@ -271,6 +281,7 @@ export const programs: Program[] = [
     ageRange: "All ages",
     category: "more-fun",
     perfectFor: "Unforgettable birthday celebrations with gymnastics fun",
+    tagline: "The party they'll talk about all year.",
     description:
       "Birthday parties are back at The Flip Zone! Enjoy 1 hour of games, obstacle courses, and gymnastics fun plus 30 minutes in our party area. Perfect for active kids who want a unique celebration.",
     learnings: [],
@@ -290,6 +301,7 @@ export const programs: Program[] = [
     ageRange: "Ages 6 & up",
     category: "more-fun",
     perfectFor: "Kids who want extra practice time or just want to play in the gym",
+    tagline: "Extra gym time on your schedule.",
     description:
       "Open Gym is a time for your child to work on skills from class or just play on the trampolines, bars, and beams. School-age Open Gym is Saturdays 12:00–1:00 PM. Pre-registration required.",
     learnings: [],
@@ -309,6 +321,7 @@ export const programs: Program[] = [
     ageRange: "Ages 5 & up",
     category: "more-fun",
     perfectFor: "Summer fun with themed weekly adventures",
+    tagline: "Themed weeks. Nonstop summer fun.",
     description:
       "Four fun-filled weeks of summer camp in June! Each week features a unique theme — Animal Adventures, Super Hero Adventures, Around the World, and Sportsmania. Campers bring lunch and water daily.",
     learnings: [
@@ -331,12 +344,41 @@ export const programCategories: {
   id: ProgramCategory;
   title: string;
   subtitle: string;
+  headline?: string;
 }[] = [
-  { id: "first-classes", title: "First Classes", subtitle: "Perfect for getting started" },
-  { id: "build-skills", title: "Build Skills", subtitle: "Grow and progress" },
-  { id: "competitive", title: "Competitive", subtitle: "Take it to the next level" },
-  { id: "more-fun", title: "More Fun", subtitle: "Parties, camps, and extras" },
+  {
+    id: "first-classes",
+    title: "Where It All Begins",
+    subtitle: "First classes",
+    headline: "Perfect for little ones just getting started",
+  },
+  {
+    id: "build-skills",
+    title: "Built for Every Skill Level",
+    subtitle: "What we train",
+    headline: "Gymnastics, tumbling, and ninja — find their fit",
+  },
+  {
+    id: "competitive",
+    title: "Ready to Go Further",
+    subtitle: "Competitive",
+    headline: "For athletes who want more",
+  },
+  {
+    id: "more-fun",
+    title: "More Ways to Play",
+    subtitle: "Beyond classes",
+    headline: "Parties, camps, and extras",
+  },
 ];
+
+export const programHighlights = [
+  { label: "20,000+ sq ft facility", emoji: "🏋️" },
+  { label: "Ages walking through teens", emoji: "👧" },
+  { label: "Preschool through competitive team", emoji: "⭐" },
+  { label: "Certified, caring coaches", emoji: "💜" },
+  { label: "Plainfield, Hendricks County", emoji: "📍" },
+] as const;
 
 export function getProgram(slug: string): Program | undefined {
   return programs.find((p) => p.slug === slug);
