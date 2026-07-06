@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button, ButtonLink, ButtonAnchor } from "@/components/ui/button";
 import { navLinks, site } from "@/data/site";
-import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -15,15 +13,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-flip-purple/10 bg-flip-purple-header/95 backdrop-blur-md">
       <div className="container-wide flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center">
-          <Image
-            src={images.logo}
-            alt={site.name}
-            width={120}
-            height={44}
-            className="h-10 w-auto object-contain sm:h-11"
-            priority
-          />
+        <Link
+          href="/"
+          className="font-heading text-lg font-bold text-flip-purple sm:text-xl"
+        >
+          The Flip Zone
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
