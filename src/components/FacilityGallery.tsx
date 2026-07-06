@@ -2,66 +2,62 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { facilityFeatures } from "@/data/site";
 import { images } from "@/lib/images";
 
-export function FacilityGallery() {
-  const facilityImages = [
-    { src: images.facility, alt: "Flip Zone facility overview", span: "col-span-2 row-span-2" },
-    { src: images.preschool, alt: "Preschool area", span: "" },
-    { src: images.ninja, alt: "Ninja rig", span: "" },
-    { src: images.recreational, alt: "Recreational gym", span: "" },
-    { src: images.team, alt: "Competitive team area", span: "" },
-  ];
+const facilityPhotos = [
+  {
+    src: images.facilityOverview,
+    alt: "The Flip Zone gym overview with foam pit, trampolines, and competition equipment",
+  },
+  {
+    src: images.facilityGymFloor,
+    alt: "The Flip Zone competition gym floor with bars, beams, and state championship banners",
+  },
+  {
+    src: images.facilityBeams,
+    alt: "Balance beams and training area at The Flip Zone",
+  },
+] as const;
 
+const facilityDescription =
+  "The Flip Zone is a two building complex totaling just over 20,000 square feet. We aim to create a fun, disciplined and hard working environment for our athletes through professional instructors and state of the art equipment. The Flip Zone complex contains a daytime preschool program, a 400 square foot loose foam pit, 3 separate trampolines, a ninja rig and all of the equipment necessary for competitive gymnastics.";
+
+export function FacilityGallery() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-muted/30">
       <div className="container-wide">
-        <div className="mb-12 text-center">
+        <div className="mb-10 text-center">
           <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
             Our Facility
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Over 20,000 square feet of state-of-the-art equipment — a selling point
-            that sets Flip Zone apart.
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {facilityImages.map((img, i) => (
-            <motion.div
-              key={img.alt}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl ${img.span}`}
-            >
-              <div className={`relative ${img.span ? "aspect-square md:aspect-auto md:h-full min-h-[280px]" : "aspect-square"}`}>
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground"
+        >
+          {facilityDescription}
+        </motion.p>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {facilityFeatures.map((feature, i) => (
+        <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+          {facilityPhotos.map((photo, i) => (
             <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 16 }}
+              key={photo.src}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="rounded-2xl border border-border bg-card p-5"
+              transition={{ delay: i * 0.1 }}
+              className="group relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-sm"
             >
-              <h3 className="font-heading font-bold text-flip-purple">{feature.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </motion.div>
           ))}
         </div>

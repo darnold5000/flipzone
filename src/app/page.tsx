@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { WelcomeIntro } from "@/components/WelcomeIntro";
 import { ClassFinder } from "@/components/ClassFinder";
 import { ProgramGrid } from "@/components/ProgramGrid";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
@@ -27,6 +27,8 @@ export default function HomePage() {
         overlay="team"
         imagePosition="center 35%"
       />
+
+      <WelcomeIntro />
 
       <ClassFinder showImage />
 
