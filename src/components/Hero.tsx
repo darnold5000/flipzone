@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
@@ -7,7 +8,8 @@ import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 interface HeroProps {
-  title: string;
+  title: ReactNode;
+  eyebrow?: string;
   subtitle?: string;
   image?: string;
   imageAlt?: string;
@@ -20,6 +22,7 @@ interface HeroProps {
 
 export function Hero({
   title,
+  eyebrow,
   subtitle,
   image,
   imageAlt = "The Flip Zone gymnastics",
@@ -72,6 +75,12 @@ export function Hero({
           transition={{ duration: 0.7, ease: "easeOut" }}
           className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}
         >
+          {eyebrow && (
+            <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-flip-teal drop-shadow-sm">
+              <span className="inline-block size-1.5 rounded-full bg-flip-teal" aria-hidden />
+              {eyebrow}
+            </p>
+          )}
           <h1 className="font-heading text-4xl font-bold leading-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl">
             {title}
           </h1>

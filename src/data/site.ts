@@ -98,33 +98,25 @@ export const whyChooseUs = [
 
 export const aboutDifferentiators = [
   {
-    title: "20,000+ sq ft",
+    title: "Confidence First",
     description:
-      "Two-building complex with foam pit, trampolines, ninja rig, and competition equipment.",
-    icon: "building" as const,
+      "Every class builds self-esteem through achievable goals, encouragement, and celebration.",
+    icon: "star" as const,
+    accent: "purple" as const,
+  },
+  {
+    title: "Safe & Certified Coaching",
+    description:
+      "USA Gymnastics affiliated with SafeSport committed, background-checked coaches.",
+    icon: "shield" as const,
     accent: "teal" as const,
   },
   {
-    title: "All Ages & Levels",
+    title: "Programs for Every Age",
     description:
       "Preschool through competitive team — plus tumbling, ninja, and special needs programs.",
     icon: "users" as const,
-    accent: "purple" as const,
-  },
-  {
-    title: "SSGNL Preschool",
-    description:
-      "Hendricks County's first fitness-based educational preschool program since 2007.",
-    icon: "graduation" as const,
-    accent: "purple" as const,
-    href: "/shooting-stars-preschool",
-  },
-  {
-    title: "SafeSport Committed",
-    description:
-      "USA Gymnastics affiliated with certified, background-checked coaching staff.",
-    icon: "shield" as const,
-    accent: "teal" as const,
+    accent: "coral" as const,
   },
   {
     title: "Competitive Excellence",
@@ -134,11 +126,18 @@ export const aboutDifferentiators = [
     accent: "orange" as const,
   },
   {
-    title: "Family-Friendly",
+    title: "Family Friendly",
     description:
       "Comfortable viewing areas, birthday parties, open gym, and summer camps.",
     icon: "heart" as const,
     accent: "coral" as const,
+  },
+  {
+    title: "20,000+ sq ft Facility",
+    description:
+      "Two-building complex with foam pit, trampolines, ninja rig, and competition equipment.",
+    icon: "building" as const,
+    accent: "teal" as const,
   },
 ] as const;
 
