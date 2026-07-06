@@ -1,5 +1,4 @@
 import { Hero } from "@/components/Hero";
-import { PathwayCards } from "@/components/PathwayCards";
 import { ProgramGrid } from "@/components/ProgramGrid";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FacilityGallery } from "@/components/FacilityGallery";
@@ -24,9 +23,7 @@ export default function HomePage() {
         imagePosition="center 35%"
       />
 
-      <PathwayCards />
-
-      <section className="section-padding">
+      <section className="section-padding bg-muted/30">
         <div className="container-wide">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>

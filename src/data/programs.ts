@@ -48,7 +48,7 @@ export const programs: Program[] = [
       "Fun, energetic environment",
     ],
     goals: "Build coordination, confidence, and a love of movement",
-    image: images.preschool,
+    image: images.pathwayPreschool,
     enrollUrl: site.iclasspro.preschool,
     featured: true,
     faqs: [
@@ -85,7 +85,7 @@ export const programs: Program[] = [
       "Fun, supportive coaching",
     ],
     goals: "Master fundamentals and progress at your own pace",
-    image: images.recreational,
+    image: images.pathwayRecreational,
     enrollUrl: site.iclasspro.recreational,
     featured: true,
   },
@@ -159,7 +159,7 @@ export const programs: Program[] = [
       "Multiple competitive pathways (USAG & NGA)",
     ],
     goals: "Excel in competition while growing as an athlete and person",
-    image: images.team,
+    image: images.pathwayCompetitive,
     enrollUrl: site.iclasspro.team,
     featured: true,
     faqs: [
