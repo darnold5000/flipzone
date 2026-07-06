@@ -14,7 +14,7 @@ export function coachPhoto(id: string, ext: "jpg" | "jpeg" | "png" = "jpg", size
 }
 
 export const images = {
-  logo: wixImage("3c407f_f92aab5f784344a78fe846a7a2144181", "png", 400, 400),
+  logo: "/images/logo.png",
   hero: "/images/hero-team.png",
   heroTeam: "/images/hero-team.png",
   facilityOverview: "/images/facility-overview.png",
