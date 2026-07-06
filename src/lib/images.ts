@@ -17,6 +17,7 @@ export const images = {
   logo: "/images/logo.png",
   hero: "/images/hero-team.png",
   heroTeam: "/images/hero-team.png",
+  aboutHero: "/images/about-hero.png",
   facilityOverview: "/images/facility-overview.png",
   facilityGymFloor: "/images/facility-gym-floor.png",
   facilityBeams: "/images/facility-beams.png",
