@@ -1,8 +1,9 @@
-import { PageHero } from "@/components/PageHero";
+import { BannerHero } from "@/components/BannerHero";
 import { CoachCard } from "@/components/CoachCard";
 import { CTA } from "@/components/CTA";
 import { Badge } from "@/components/ui/badge";
 import { staff, staffProfilePreviews } from "@/data/staff";
+import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -15,13 +16,11 @@ export const metadata = createMetadata({
 export default function StaffPage() {
   return (
     <>
-      <PageHero
-        seed="staff"
-        title="Meet the Flip Zone Family"
-        subtitle="Coaches who love what they do — and love your kids"
-        size="medium"
-        showButtons={false}
-        align="center"
+      <BannerHero
+        src={images.staffHero}
+        alt="Meet the Team Behind the Magic — experienced coaches who love helping kids shine"
+        width={1024}
+        height={156}
       />
 
       <section className="section-padding border-b border-border bg-flip-purple/5">

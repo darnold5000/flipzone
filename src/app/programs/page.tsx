@@ -1,7 +1,8 @@
-import { PageHero } from "@/components/PageHero";
+import { BannerHero } from "@/components/BannerHero";
 import { ClassFinder } from "@/components/ClassFinder";
 import { ProgramsCatalog } from "@/components/ProgramsCatalog";
 import { CTA } from "@/components/CTA";
+import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -14,13 +15,11 @@ export const metadata = createMetadata({
 export default function ProgramsPage() {
   return (
     <>
-      <PageHero
-        seed="programs"
-        title="Find the Right Program for Your Child"
-        subtitle="A decision guide — not just a list"
-        size="medium"
-        showButtons={false}
-        align="center"
+      <BannerHero
+        src={images.programsHero}
+        alt="More Than Just a Gym — building confidence, strength, and friendships since 2007 in Plainfield, Indiana"
+        width={1024}
+        height={169}
       />
 
       <ClassFinder />

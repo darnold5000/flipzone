@@ -1,7 +1,8 @@
-import { PageHero } from "@/components/PageHero";
+import { BannerHero } from "@/components/BannerHero";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { faqs } from "@/data/faq";
+import { images } from "@/lib/images";
 import { createMetadata, faqSchema } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -21,13 +22,11 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <PageHero
-        seed="faq"
-        title="Frequently Asked Questions"
-        subtitle="Everything parents want to know before enrolling"
-        size="medium"
-        showButtons={false}
-        align="center"
+      <BannerHero
+        src={images.faqHero}
+        alt="We're Here For You — have questions or ready to get started at The Flip Zone"
+        width={1024}
+        height={153}
       />
 
       <section className="section-padding">

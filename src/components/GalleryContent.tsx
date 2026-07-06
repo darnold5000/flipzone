@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import { PageHero } from "@/components/PageHero";
+import { BannerHero } from "@/components/BannerHero";
 import { CTA } from "@/components/CTA";
 import { galleryCategories, type GalleryCategory } from "@/data/gallery";
+import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export function GalleryContent() {
@@ -18,13 +19,11 @@ export function GalleryContent() {
 
   return (
     <>
-      <PageHero
-        seed="gallery"
-        title="Gallery"
-        subtitle="Action, smiles, and moments that matter"
-        size="medium"
-        showButtons={false}
-        align="center"
+      <BannerHero
+        src={images.galleryHero}
+        alt="Moments That Matter — memories from first cartwheels to big victories at The Flip Zone"
+        width={1024}
+        height={164}
       />
 
       <section className="section-padding">
