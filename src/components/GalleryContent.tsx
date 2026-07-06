@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { galleryCategories, type GalleryCategory } from "@/data/gallery";
 import { cn } from "@/lib/utils";
@@ -18,7 +18,8 @@ export function GalleryContent() {
 
   return (
     <>
-      <Hero
+      <PageHero
+        seed="gallery"
         title="Gallery"
         subtitle="Action, smiles, and moments that matter"
         size="medium"

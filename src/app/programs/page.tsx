@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { ClassFinder } from "@/components/ClassFinder";
 import { CTA } from "@/components/CTA";
 import { Badge } from "@/components/ui/badge";
@@ -18,7 +18,8 @@ export const metadata = createMetadata({
 export default function ProgramsPage() {
   return (
     <>
-      <Hero
+      <PageHero
+        seed="programs"
         title="Find the Right Program for Your Child"
         subtitle="A decision guide — not just a list"
         size="medium"

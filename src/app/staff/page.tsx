@@ -1,4 +1,4 @@
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { CoachCard } from "@/components/CoachCard";
 import { CTA } from "@/components/CTA";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +15,8 @@ export const metadata = createMetadata({
 export default function StaffPage() {
   return (
     <>
-      <Hero
+      <PageHero
+        seed="staff"
         title="Meet the Flip Zone Family"
         subtitle="Coaches who love what they do — and love your kids"
         size="medium"

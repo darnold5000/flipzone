@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { ProgramGrid } from "@/components/ProgramGrid";
@@ -39,7 +39,8 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
     <>
       <EnrollmentBanner programName={program.name} enrollUrl={program.enrollUrl} />
 
-      <Hero
+      <PageHero
+        seed={program.slug}
         title={program.name}
         subtitle={program.perfectFor}
         size="large"

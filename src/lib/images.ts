@@ -32,3 +32,18 @@ export const images = {
   camps: wixImage("3c407f_34b18d66a39441ebac485114cf4b8fc4", "png", 1200, 800),
   coach1: wixImage("3c407f_9ee85fd2ef6c4f68b143d2d1b033ada2", "png", 600, 600),
 } as const;
+
+export const facilityHeroImages = [
+  images.facilityOverview,
+  images.facilityGymFloor,
+  images.facilityBeams,
+] as const;
+
+/** Pick one of the three facility photos — stable per seed, varied across pages. */
+export function pickFacilityHeroImage(seed: string): string {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  }
+  return facilityHeroImages[hash % facilityHeroImages.length];
+}

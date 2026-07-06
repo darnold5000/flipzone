@@ -1,4 +1,4 @@
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { faqs } from "@/data/faq";
@@ -21,7 +21,8 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <Hero
+      <PageHero
+        seed="faq"
         title="Frequently Asked Questions"
         subtitle="Everything parents want to know before enrolling"
         size="medium"

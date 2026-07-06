@@ -1,5 +1,5 @@
 import { Mail, Phone, Share2 } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { LocationMap } from "@/components/LocationMap";
 import { CTA } from "@/components/CTA";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
@@ -16,7 +16,8 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <>
-      <Hero
+      <PageHero
+        seed="contact"
         title="Get in Touch"
         subtitle="We'd love to hear from you"
         size="medium"

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Hero } from "@/components/Hero";
+import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { ButtonLink } from "@/components/ui/button";
 import { site } from "@/data/site";
@@ -15,7 +15,8 @@ export const metadata = createMetadata({
 export default function AboutPage() {
   return (
     <>
-      <Hero
+      <PageHero
+        seed="about"
         title="More Than a Gym"
         subtitle="A supportive community building confidence through gymnastics"
         size="large"
