@@ -10,9 +10,11 @@ import type { Program } from "@/data/programs";
 import { cn } from "@/lib/utils";
 
 const featuredImageClass: Partial<Record<string, string>> = {
-  "preschool-gymnastics": "object-cover",
-  "recreational-gymnastics": "object-contain bg-flip-purple p-4",
-  "competitive-team": "object-cover object-[center_25%]",
+  "preschool-gymnastics": "object-cover object-center",
+  "recreational-gymnastics": "object-cover object-[center_40%]",
+  "competitive-team": "object-contain bg-muted object-center",
+  "tumbling": "object-cover object-center",
+  "ninjanastics": "object-cover object-center",
 };
 
 interface ProgramCardProps {
