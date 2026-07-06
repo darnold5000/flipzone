@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
@@ -44,6 +45,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <MobileStickyCTA />
+        <Analytics />
       </body>
     </html>
   );
