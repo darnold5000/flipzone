@@ -1,8 +1,13 @@
-import { Mail, Phone, Share2 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { LocationMap } from "@/components/LocationMap";
 import { CTA } from "@/components/CTA";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  MailLetterIcon,
+  PhoneCallIcon,
+} from "@/components/icons/ContactLinkIcons";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
@@ -55,32 +60,32 @@ export default function ContactPage() {
               href={site.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-[#1877F2]/40 hover:bg-[#1877F2]/5"
             >
-              <Share2 className="size-5 text-flip-purple" />
+              <FacebookIcon />
               Facebook
             </a>
             <a
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-[#DD2A7B]/40 hover:bg-[#DD2A7B]/5"
             >
-              <Share2 className="size-5 text-flip-purple" />
+              <InstagramIcon />
               Instagram
             </a>
             <a
               href={`mailto:${site.email}`}
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-silver"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-[#EA4335]/40 hover:bg-[#EA4335]/5"
             >
-              <Mail className="size-5 text-flip-purple" />
+              <MailLetterIcon />
               Email Us
             </a>
             <a
               href={`tel:${site.phones.recreational}`}
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-[#16A34A]/40 hover:bg-[#16A34A]/5"
             >
-              <Phone className="size-5 text-flip-purple" />
+              <PhoneCallIcon />
               Call Us
             </a>
           </div>
