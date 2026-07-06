@@ -12,9 +12,9 @@ import { cn } from "@/lib/utils";
 const featuredImageClass: Partial<Record<string, string>> = {
   "preschool-gymnastics": "object-cover object-center",
   "recreational-gymnastics": "object-cover object-[center_40%]",
-  "competitive-team": "object-contain bg-muted object-center",
-  "tumbling": "object-cover object-center",
-  "ninjanastics": "object-cover object-center",
+  "competitive-team": "object-cover object-[center_22%]",
+  tumbling: "object-cover object-center",
+  ninjanastics: "object-cover object-center",
 };
 
 interface ProgramCardProps {
@@ -63,7 +63,7 @@ export function ProgramCard({
         transition={{ duration: 0.5, delay: index * 0.08 }}
         className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-flip-purple/20 hover:shadow-lg"
       >
-        <div className="relative h-44 shrink-0 overflow-hidden sm:h-48">
+        <div className="relative aspect-[4/3] shrink-0 overflow-hidden">
           <Image
             src={program.image}
             alt={program.name}
