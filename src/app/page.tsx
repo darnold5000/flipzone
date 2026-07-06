@@ -5,18 +5,18 @@ import { FacilityGallery } from "@/components/FacilityGallery";
 import { Testimonials } from "@/components/Testimonials";
 import { CTA } from "@/components/CTA";
 import { ButtonLink } from "@/components/ui/button";
-import { programs } from "@/data/programs";
+import { getHomepageFeaturedPrograms } from "@/data/programs";
 import { site } from "@/data/site";
 import { images } from "@/lib/images";
 
 export default function HomePage() {
-  const featuredPrograms = programs.filter((p) => p.featured);
+  const featuredPrograms = getHomepageFeaturedPrograms();
 
   return (
     <>
       <Hero
         title={site.tagline}
-        subtitle="Competitive Team • Preschool • Recreational • Tumbling • Ninja"
+        subtitle="Competitive Team • Recreational • Tumbling • Preschool • SSGNL • Ninja"
         image={images.heroTeam}
         imageAlt="The Flip Zone competitive gymnastics team in Plainfield, Indiana"
         overlay="team"

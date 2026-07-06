@@ -229,6 +229,7 @@ export const programs: Program[] = [
     goals: "Learn, move, and grow in a unique fitness-based preschool",
     image: images.programSsgnl,
     enrollUrl: site.iclasspro.portal,
+    featured: true,
     faqs: [
       {
         question: "What ages does SSGNL accept?",
@@ -339,6 +340,22 @@ export const programs: Program[] = [
     enrollUrl: site.iclasspro.classes,
   },
 ];
+
+/** Homepage "Our Programs" section — order and membership. */
+export const homepageFeaturedSlugs = [
+  "competitive-team",
+  "recreational-gymnastics",
+  "tumbling",
+  "preschool-gymnastics",
+  "shooting-stars-preschool",
+  "ninjanastics",
+] as const;
+
+export function getHomepageFeaturedPrograms(): Program[] {
+  return homepageFeaturedSlugs
+    .map((slug) => getProgram(slug))
+    .filter((p): p is Program => p !== undefined);
+}
 
 export const programCategories: {
   id: ProgramCategory;
