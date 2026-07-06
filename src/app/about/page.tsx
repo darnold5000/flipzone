@@ -67,6 +67,7 @@ export default function AboutPage() {
               {
                 title: "SSGNL Preschool",
                 desc: "Hendricks County's first fitness-based educational preschool program since 2007.",
+                href: "/shooting-stars-preschool",
               },
               {
                 title: "SafeSport Committed",
@@ -82,8 +83,19 @@ export default function AboutPage() {
               },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl border border-border bg-card p-6">
-                <h3 className="font-heading text-lg font-bold text-flip-purple">{item.title}</h3>
-                <p className="mt-2 text-muted-foreground">{item.desc}</p>
+                {"href" in item && item.href ? (
+                  <Link href={item.href} className="group block">
+                    <h3 className="font-heading text-lg font-bold text-flip-purple group-hover:underline">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">{item.desc}</p>
+                  </Link>
+                ) : (
+                  <>
+                    <h3 className="font-heading text-lg font-bold text-flip-purple">{item.title}</h3>
+                    <p className="mt-2 text-muted-foreground">{item.desc}</p>
+                  </>
+                )}
               </div>
             ))}
           </div>

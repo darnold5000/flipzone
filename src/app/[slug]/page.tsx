@@ -8,7 +8,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-const dedicatedPages = new Set(["preschool-gymnastics", "competitive-team"]);
+const dedicatedPages = new Set(["preschool-gymnastics", "competitive-team", "shooting-stars-preschool"]);
 
 export async function generateStaticParams() {
   return programs

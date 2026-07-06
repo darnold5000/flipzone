@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { Heart, Sparkles, Users, Ear, Zap, Smile } from "lucide-react";
 import { ProgramPageTemplate } from "@/components/programs/ProgramPageTemplate";
+import { ButtonLink } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { getProgram } from "@/data/programs";
 import { site } from "@/data/site";
 import { images } from "@/lib/images";
@@ -69,6 +71,22 @@ export default function PreschoolPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-muted/50">
+        <div className="container-wide max-w-3xl">
+          <Badge className="mb-4 bg-flip-purple/10 text-flip-purple">Also at Flip Zone</Badge>
+          <h2 className="font-heading text-3xl font-bold text-flip-purple">
+            Shooting Stars Gym N Learn (SSGNL)
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            Since 2007, SSGNL has been Hendricks County&apos;s first fitness-based educational
+            preschool — combining a strong academic curriculum with daily gymnastics in our facility.
+          </p>
+          <ButtonLink variant="outline" className="mt-6 rounded-xl" href="/shooting-stars-preschool">
+            Learn About SSGNL Preschool
+          </ButtonLink>
         </div>
       </section>
 

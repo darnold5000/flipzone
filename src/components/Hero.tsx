@@ -36,10 +36,10 @@ export function Hero({
   };
 
   const overlays = {
-    dark: "bg-black/55",
-    light: "bg-white/30",
-    gradient: "bg-gradient-to-r from-flip-purple/85 via-flip-purple/50 to-transparent",
-    team: "bg-gradient-to-t from-flip-black/90 via-flip-black/45 to-flip-purple/25",
+    dark: "bg-black/40",
+    light: "bg-white/20",
+    gradient: "bg-gradient-to-r from-flip-purple/70 via-flip-purple/35 to-transparent",
+    team: "bg-gradient-to-t from-flip-black/65 via-flip-black/15 to-flip-purple/10",
   };
 
   return (
@@ -57,7 +57,7 @@ export function Hero({
             alt={imageAlt}
             fill
             priority
-            className="object-cover"
+            className="object-cover brightness-[1.12] contrast-[1.03] saturate-[1.08]"
             style={{ objectPosition: imagePosition }}
             sizes="100vw"
           />
@@ -72,11 +72,11 @@ export function Hero({
           transition={{ duration: 0.7, ease: "easeOut" }}
           className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}
         >
-          <h1 className="font-heading text-4xl font-bold leading-tight text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-4xl font-bold leading-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-4 text-lg text-white/90 sm:text-xl lg:text-2xl">
+            <p className="mt-4 text-lg text-white drop-shadow sm:text-xl lg:text-2xl">
               {subtitle}
             </p>
           )}

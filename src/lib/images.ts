@@ -21,7 +21,7 @@ export const images = {
   facilityGymFloor: "/images/facility-gym-floor.png",
   facilityBeams: "/images/facility-beams.png",
   facility: "/images/facility-overview.png",
-  /** Stock photos for homepage pathway cards (Pexels / Unsplash, royalty-free). */
+  /** Flip Zone photos for homepage pathway cards. */
   pathwayPreschool: "/images/pathways/preschool.jpg",
   pathwayRecreational: "/images/pathways/recreational.jpg",
   pathwayCompetitive: "/images/pathways/competitive.jpg",

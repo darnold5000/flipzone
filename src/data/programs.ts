@@ -204,22 +204,43 @@ export const programs: Program[] = [
     category: "first-classes",
     perfectFor: "Families seeking a fitness-based educational preschool program",
     description:
-      "Since 2007, Shooting Stars Gym N Learn has been Hendricks County's first fitness-based educational program. Classes meet Mon/Wed/Fri with 30–45 minutes of daily gymnastics in our state-of-the-art facility.",
+      "Since 2007, Shooting Stars Gym N Learn is Hendricks County's first fitness-based educational program. PreK and 3's programs meet Mon/Wed/Fri, 9:30 AM–1:30 PM, with daily gymnastics at The Flip Zone.",
     learnings: [
-      "Pre-K academic readiness",
-      "Daily gymnastics and fitness",
-      "Social and emotional development",
-      "Field trips and special visitors",
+      "PreK (4 by August 1st), Older 3's (3 by August 1st, potty trained), Young 3's (3 by December 1st)",
+      "30–45 minutes of daily gymnastics and fitness",
+      "Modified Abeka curriculum with movement-based learning",
+      "Field trips, visitors, conferences, and Pre-K graduation",
     ],
     benefits: [
-      "Fitness-based curriculum since 2007",
-      "Daily gymnastics in our facility",
-      "Field trips and enrichment activities",
-      "Parent-teacher conferences and graduation",
+      "Academic curriculum plus a full gymnastics gym",
+      "Convenient car drop-off and pick-up lines",
+      "Develops academic, social, emotional, and physical skills",
+      "Special events: orchard, Children's Museum, aquatic center, and more",
     ],
     goals: "Learn, move, and grow in a unique fitness-based preschool",
     image: images.ssgnl,
     enrollUrl: site.iclasspro.portal,
+    faqs: [
+      {
+        question: "What ages does SSGNL accept?",
+        answer:
+          "We offer PreK (4 by August 1st), Older 3's (3 by August 1st and potty trained), and Young 3's (3 by December 1st). Tumbling Tykes is available for children 18 months–2 years who will not be 3 by December 1st.",
+      },
+      {
+        question: "When does registration open for 2026–2027?",
+        answer:
+          "Current SSGNL families: January 12th. Flip Zone families: January 26th. The public: February 2nd.",
+      },
+      {
+        question: "What are class days and times?",
+        answer:
+          "Classes meet Mondays, Wednesdays, and Fridays from 9:30 AM to 1:30 PM, including 30–45 minutes of gymnastics and fitness daily.",
+      },
+      {
+        question: "Who do I call about SSGNL?",
+        answer: `Call ${site.phones.teamPreschool} for team and SSGNL preschool questions.`,
+      },
+    ],
   },
   {
     slug: "private-lessons",

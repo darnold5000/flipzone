@@ -13,7 +13,8 @@ const pathways = [
     description: "Build confidence through movement.",
     href: "/preschool-gymnastics",
     image: images.pathwayPreschool,
-    imageAlt: "Young child on a balance beam with a coach nearby",
+    imageAlt: "Preschool children doing a craft activity at The Flip Zone",
+    imageClass: "object-cover",
     icon: Baby,
     iconClass: "bg-white/95 text-flip-purple",
   },
@@ -22,7 +23,8 @@ const pathways = [
     description: "Learn gymnastics while having fun.",
     href: "/recreational-gymnastics",
     image: images.pathwayRecreational,
-    imageAlt: "Coach leading a group of children in a gym class",
+    imageAlt: "Recreational gymnastics students at The Flip Zone",
+    imageClass: "object-contain bg-flip-purple p-2",
     icon: Sparkles,
     iconClass: "bg-white/95 text-flip-purple",
   },
@@ -31,7 +33,8 @@ const pathways = [
     description: "Train with experienced coaches.",
     href: "/competitive-team",
     image: images.pathwayCompetitive,
-    imageAlt: "Gymnast performing a handstand on the balance beam",
+    imageAlt: "The Flip Zone competitive team with medals",
+    imageClass: "object-cover object-[center_25%]",
     icon: Trophy,
     iconClass: "bg-white/95 text-flip-purple",
   },
@@ -75,7 +78,10 @@ export function PathwayCards() {
                       src={path.image}
                       alt={path.imageAlt}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={cn(
+                        "transition-transform duration-500 group-hover:scale-105",
+                        path.imageClass,
+                      )}
                       sizes="(max-width: 640px) 100vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-flip-black/75 via-flip-black/15 to-transparent" />
