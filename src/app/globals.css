@@ -46,6 +46,11 @@
   --color-flip-white: var(--flip-white);
   --color-flip-gray: var(--flip-gray);
   --color-flip-silver: var(--flip-silver);
+  --color-flip-aqua: var(--flip-aqua);
+  --color-flip-aqua-dark: var(--flip-aqua-dark);
+  --color-flip-gold: var(--flip-gold);
+  --color-flip-lavender: var(--flip-lavender);
+  --color-flip-soft-blue: var(--flip-soft-blue);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -65,6 +70,11 @@
   --flip-white: #ffffff;
   --flip-silver: #e8e8ec;
   --flip-gray: #f5f5f7;
+  --flip-aqua: #00b8d4;
+  --flip-aqua-dark: #0097b2;
+  --flip-gold: #e8b923;
+  --flip-lavender: #f3effa;
+  --flip-soft-blue: #eef6fb;
 
   --background: var(--flip-white);
   --foreground: var(--flip-black);
@@ -108,7 +118,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans text-[1.0625rem] leading-relaxed antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), system-ui, sans-serif;
@@ -128,5 +138,14 @@
   }
   .bg-uniform-gradient {
     background: linear-gradient(135deg, var(--flip-purple) 0%, var(--flip-black) 100%);
+  }
+  .bg-flip-lavender {
+    background-color: var(--flip-lavender);
+  }
+  .bg-flip-soft-blue {
+    background-color: var(--flip-soft-blue);
+  }
+  .full-bleed {
+    @apply relative left-1/2 w-screen max-w-none -translate-x-1/2;
   }
 }

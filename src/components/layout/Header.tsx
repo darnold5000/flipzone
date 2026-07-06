@@ -45,7 +45,7 @@ export function Header() {
           <ButtonLink variant="outline" size="sm" href="/programs#class-finder">
             Find Classes
           </ButtonLink>
-          <ButtonAnchor size="sm" href={site.iclasspro.classes}>
+          <ButtonAnchor size="sm" variant="accent" href={site.iclasspro.classes}>
             Enroll Now
           </ButtonAnchor>
         </div>

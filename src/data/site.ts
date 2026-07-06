@@ -1,6 +1,6 @@
 export const site = {
   name: "The Flip Zone",
-  tagline: "Building Confidence Through Gymnastics",
+  tagline: "Where Confidence Begins One Cartwheel at a Time",
   description:
     "Premier gymnastics facility in Plainfield, Indiana serving Avon, Brownsburg, and Hendricks County families with preschool, recreational, tumbling, ninja, and competitive team programs.",
   url: "https://www.theflipzone.com",
