@@ -21,6 +21,10 @@ export const images = {
   facilityGymFloor: "/images/facility-gym-floor.png",
   facilityBeams: "/images/facility-beams.png",
   facility: "/images/facility-overview.png",
+  /** Stock photos for homepage pathway cards (Pexels / Unsplash, royalty-free). */
+  pathwayPreschool: "/images/pathways/preschool.jpg",
+  pathwayRecreational: "/images/pathways/recreational.jpg",
+  pathwayCompetitive: "/images/pathways/competitive.jpg",
   preschool: wixImage("3c407f_20c4205ef7d447b9b93eca2fbf73055d", "jpg", 1200, 800),
   recreational: wixImage("3c407f_76362b8ee1a44252a7d590af253908e6", "jpg", 1200, 800),
   tumbling: wixImage("3c407f_3f1aa624f5a74a1fb102e905ea400640", "jpeg", 1200, 800),

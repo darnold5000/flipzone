@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Baby, Sparkles, Trophy } from "lucide-react";
+import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const pathways = [
@@ -10,22 +12,28 @@ const pathways = [
     title: "Preschool",
     description: "Build confidence through movement.",
     href: "/preschool-gymnastics",
+    image: images.pathwayPreschool,
+    imageAlt: "Young child on a balance beam with a coach nearby",
     icon: Baby,
-    iconClass: "bg-flip-purple/10 text-flip-purple",
+    iconClass: "bg-white/95 text-flip-purple",
   },
   {
     title: "Recreational",
     description: "Learn gymnastics while having fun.",
     href: "/recreational-gymnastics",
+    image: images.pathwayRecreational,
+    imageAlt: "Coach leading a group of children in a gym class",
     icon: Sparkles,
-    iconClass: "bg-flip-purple/10 text-flip-purple",
+    iconClass: "bg-white/95 text-flip-purple",
   },
   {
     title: "Competitive",
     description: "Train with experienced coaches.",
     href: "/competitive-team",
+    image: images.pathwayCompetitive,
+    imageAlt: "Gymnast performing a handstand on the balance beam",
     icon: Trophy,
-    iconClass: "bg-flip-purple/15 text-flip-purple",
+    iconClass: "bg-white/95 text-flip-purple",
   },
 ] as const;
 
@@ -60,22 +68,36 @@ export function PathwayCards() {
               >
                 <Link
                   href={path.href}
-                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-flip-purple/30 hover:shadow-md"
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-flip-purple/30 hover:shadow-lg"
                 >
-                  <span
-                    className={cn(
-                      "mb-5 flex size-14 items-center justify-center rounded-2xl",
-                      path.iconClass,
-                    )}
-                  >
-                    <Icon className="size-7" strokeWidth={1.75} />
-                  </span>
-                  <h3 className="font-heading text-xl font-bold text-flip-purple">{path.title}</h3>
-                  <p className="mt-2 flex-1 text-muted-foreground">{path.description}</p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-flip-purple group-hover:gap-2">
-                    Learn more
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                  </span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={path.image}
+                      alt={path.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-flip-black/75 via-flip-black/15 to-transparent" />
+                    <span
+                      className={cn(
+                        "absolute left-4 top-4 flex size-11 items-center justify-center rounded-xl shadow-sm",
+                        path.iconClass,
+                      )}
+                    >
+                      <Icon className="size-5" strokeWidth={1.75} />
+                    </span>
+                    <h3 className="absolute bottom-4 left-4 font-heading text-2xl font-bold text-white drop-shadow">
+                      {path.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <p className="flex-1 text-muted-foreground">{path.description}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-flip-purple group-hover:gap-2">
+                      Learn more
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             );
