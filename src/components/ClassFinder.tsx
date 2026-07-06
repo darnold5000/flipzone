@@ -4,11 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, Baby, Star, RotateCw, Flame, Trophy, GraduationCap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { AgeSelector } from "@/components/AgeSelector";
 import { Button, ButtonAnchor, ButtonLink } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { classFinderMap, getProgram, programs } from "@/data/programs";
+import { classFinderMap, getHomepageFeaturedPrograms, getProgram } from "@/data/programs";
 
 const ageOptions = [
   { id: "parent-tot", label: "Parent & Tot", description: "Walking – 3 years" },
@@ -26,6 +27,15 @@ const interestOptions = [
   { id: "preschool", label: "Preschool", description: "Early movement & fun" },
   { id: "private-lessons", label: "Private Lessons", description: "One-on-one coaching" },
 ];
+
+const browseProgramIcons: Record<string, LucideIcon> = {
+  "preschool-gymnastics": Baby,
+  "recreational-gymnastics": Star,
+  tumbling: RotateCw,
+  ninjanastics: Flame,
+  "competitive-team": Trophy,
+  "shooting-stars-preschool": GraduationCap,
+};
 
 interface ClassFinderProps {
   showImage?: boolean;
@@ -174,15 +184,19 @@ export function ClassFinder({ showImage = false }: ClassFinderProps) {
             Or browse all programs
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {programs.filter((p) => p.featured).map((p) => (
-              <Link
-                key={p.slug}
-                href={`/${p.slug}`}
-                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-flip-purple hover:text-flip-purple"
-              >
-                {p.shortName}
-              </Link>
-            ))}
+            {getHomepageFeaturedPrograms().map((p) => {
+              const Icon = browseProgramIcons[p.slug] ?? Sparkles;
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/${p.slug}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:border-flip-purple/40 hover:bg-flip-purple/5 hover:text-flip-purple hover:shadow-md"
+                >
+                  <Icon className="size-4 shrink-0 text-flip-purple" aria-hidden />
+                  {p.shortName}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

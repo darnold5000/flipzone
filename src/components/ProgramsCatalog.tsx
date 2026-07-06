@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Program, ProgramCategory } from "@/data/programs";
-import { programCategories, programHighlights, programs } from "@/data/programs";
+import { programCategories, programs } from "@/data/programs";
 import { cn } from "@/lib/utils";
 
 const catalogImageClass: Partial<Record<string, string>> = {
@@ -71,22 +71,6 @@ export function ProgramsCatalog() {
   return (
     <section className="section-padding bg-muted/30">
       <div className="container-wide">
-        <div className="mb-12 flex flex-wrap justify-center gap-x-8 gap-y-4 border-b border-border pb-10">
-          {programHighlights.map((item) => (
-            <div
-              key={item.label}
-              className="flex min-w-[140px] flex-col items-center gap-1.5 text-center"
-            >
-              <span className="text-xl" aria-hidden>
-                {item.emoji}
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                {item.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
         <div className="space-y-16">
           {programCategories.map((category) => {
             const categoryPrograms = programs.filter((p) => p.category === category.id);

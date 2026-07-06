@@ -389,14 +389,6 @@ export const programCategories: {
   },
 ];
 
-export const programHighlights = [
-  { label: "20,000+ sq ft facility", emoji: "🏋️" },
-  { label: "Ages walking through teens", emoji: "👧" },
-  { label: "Preschool through competitive team", emoji: "⭐" },
-  { label: "Certified, caring coaches", emoji: "💜" },
-  { label: "Plainfield, Hendricks County", emoji: "📍" },
-] as const;
-
 export function getProgram(slug: string): Program | undefined {
   return programs.find((p) => p.slug === slug);
 }
