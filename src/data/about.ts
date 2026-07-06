@@ -2,7 +2,7 @@ import { images } from "@/lib/images";
 
 export const aboutStory = {
   heroSubtitle:
-    "Since 2007, helping Indiana families build confidence, strength, and a lifelong love of movement.",
+    "Since 2007, Flip Zone has been helping Indiana families build confidence, strength, friendships, and a lifelong love of movement.",
   intro:
     "Since 2007, Flip Zone has helped Indiana families build confidence, strength, friendships, and a lifelong love of movement. Whether it's a toddler's first class or an athlete training for competition, every child is encouraged to grow at their own pace in a safe and supportive environment.",
   moreThanAGym:
