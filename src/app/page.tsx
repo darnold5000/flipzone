@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <Hero
         title={site.tagline}
-        subtitle="Preschool • Recreational • Tumbling • Ninja • Competitive Team"
+        subtitle="Competitive Team • Preschool • Recreational • Tumbling • Ninja"
         image={images.heroTeam}
         imageAlt="The Flip Zone competitive gymnastics team in Plainfield, Indiana"
         overlay="team"
