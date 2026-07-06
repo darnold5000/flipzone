@@ -17,7 +17,7 @@ const catalogImageClass: Partial<Record<string, string>> = {
   tumbling: "object-cover object-center",
   ninjanastics: "object-cover object-center",
   gymstars: "object-cover object-center",
-  "private-lessons": "object-cover object-[center_30%]",
+  "private-lessons": "object-cover object-center",
   "birthday-parties": "object-cover object-center",
   "summer-camps": "object-cover object-center",
 };
