@@ -1,0 +1,95 @@
+import Link from "next/link";
+import { Mail, Phone, Share2 } from "lucide-react";
+import { Hero } from "@/components/Hero";
+import { LocationMap } from "@/components/LocationMap";
+import { CTA } from "@/components/CTA";
+import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
+import { site } from "@/data/site";
+import { images } from "@/lib/images";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Contact The Flip Zone | Plainfield Indiana Gymnastics",
+  description:
+    "Contact The Flip Zone at 880 Andico Road, Plainfield, IN. Call 317-838-0667 for recreational gym or 317-268-4810 for team and preschool. Serving Avon and Brownsburg.",
+  path: "/contact",
+});
+
+export default function ContactPage() {
+  return (
+    <>
+      <Hero
+        title="Get in Touch"
+        subtitle="We'd love to hear from you"
+        image={images.facility}
+        size="medium"
+        showButtons={false}
+        align="center"
+      />
+
+      <section className="section-padding">
+        <div className="container-wide">
+          <LocationMap />
+        </div>
+      </section>
+
+      <section className="section-padding bg-muted/50">
+        <div className="container-wide">
+          <div className="mx-auto max-w-2xl rounded-3xl border border-border bg-card p-8 text-center shadow-sm">
+            <h2 className="font-heading text-2xl font-bold text-flip-blue">
+              Ready to Enroll?
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Browse classes and register online through our parent portal.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <ButtonAnchor size="lg" className="rounded-2xl" href={site.iclasspro.classes}>
+                Enroll Now
+              </ButtonAnchor>
+              <ButtonLink size="lg" variant="outline" className="rounded-2xl" href="/programs#class-finder">
+                Find Your Class
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-blue"
+            >
+              <Share2 className="size-5 text-flip-blue" />
+              Facebook
+            </a>
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
+            >
+              <Share2 className="size-5 text-flip-purple" />
+              Instagram
+            </a>
+            <a
+              href={`mailto:${site.email}`}
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-aqua"
+            >
+              <Mail className="size-5 text-flip-blue" />
+              Email Us
+            </a>
+            <a
+              href={`tel:${site.phones.recreational}`}
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-blue"
+            >
+              <Phone className="size-5 text-flip-blue" />
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <CTA variant="default" />
+    </>
+  );
+}
