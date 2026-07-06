@@ -41,6 +41,7 @@
   --color-card: var(--card);
   --color-flip-purple: var(--flip-purple);
   --color-flip-purple-light: var(--flip-purple-light);
+  --color-flip-purple-header: var(--flip-purple-header);
   --color-flip-black: var(--flip-black);
   --color-flip-white: var(--flip-white);
   --color-flip-gray: var(--flip-gray);
@@ -58,6 +59,7 @@
   /* Uniform palette: royal purple, black, white/silver */
   --flip-purple: #4b2c85;
   --flip-purple-light: #6b3fa8;
+  --flip-purple-header: #ebe4f7;
   --flip-purple-dark: #3a2168;
   --flip-black: #0a0a0a;
   --flip-white: #ffffff;

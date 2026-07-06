@@ -16,7 +16,7 @@ export function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-flip-purple/10 bg-flip-purple-header/95 backdrop-blur-md">
       <div className="container-wide flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           {isHome ? (
@@ -79,7 +79,7 @@ export function Header() {
 
       <div
         className={cn(
-          "overflow-hidden border-t border-border/60 bg-background transition-all lg:hidden",
+          "overflow-hidden border-t border-flip-purple/10 bg-flip-purple-header transition-all lg:hidden",
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >
