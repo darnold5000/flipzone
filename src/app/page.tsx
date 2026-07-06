@@ -1,5 +1,5 @@
 import { Hero } from "@/components/Hero";
-import { WelcomeIntro } from "@/components/WelcomeIntro";
+import { PathwayCards } from "@/components/PathwayCards";
 import { ProgramGrid } from "@/components/ProgramGrid";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FacilityGallery } from "@/components/FacilityGallery";
@@ -24,7 +24,7 @@ export default function HomePage() {
         imagePosition="center 35%"
       />
 
-      <WelcomeIntro />
+      <PathwayCards />
 
       <section className="section-padding">
         <div className="container-wide">
