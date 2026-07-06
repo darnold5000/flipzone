@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Oswald, Inter } from "next/font/google";
+import { Oswald, Inter, Caveat } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
@@ -18,6 +18,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const caveat = Caveat({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const metadata: Metadata = createMetadata({
   title: "Gymnastics Plainfield Indiana | Preschool, Recreational & Team",
   description: site.description,
@@ -32,7 +38,7 @@ export default function RootLayout({
   const schema = localBusinessSchema();
 
   return (
-    <html lang="en" className={`${oswald.variable} ${inter.variable} h-full`}>
+    <html lang="en" className={`${oswald.variable} ${inter.variable} ${caveat.variable} h-full`}>
       <head>
         <script
           type="application/ld+json"

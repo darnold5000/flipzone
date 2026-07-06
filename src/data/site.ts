@@ -1,3 +1,5 @@
+import { images } from "@/lib/images";
+
 export const site = {
   name: "The Flip Zone",
   tagline: "Building Confidence Through Gymnastics",
@@ -54,31 +56,43 @@ export const whyChooseUs = [
     title: "Confidence",
     description: "Every class builds self-esteem through achievable goals and celebration.",
     icon: "star" as const,
+    image: images.programPreschool,
+    accent: "purple" as const,
   },
   {
     title: "Safe Coaching",
     description: "USA Gymnastics certified coaches in a SafeSport committed facility.",
     icon: "shield" as const,
+    image: images.programPrivateLessons,
+    accent: "teal" as const,
   },
   {
     title: "Experienced Staff",
     description: "Dedicated professionals who love teaching kids of every age and level.",
     icon: "users" as const,
+    image: images.team,
+    accent: "purple" as const,
   },
   {
     title: "Positive Environment",
     description: "Fun, disciplined, and hard-working — where every child feels welcome.",
     icon: "heart" as const,
+    image: images.programRecreational,
+    accent: "coral" as const,
   },
   {
     title: "Competitive Path",
     description: "From first cartwheel to national-level competition, we grow with your child.",
     icon: "trophy" as const,
+    image: images.programCompetitive,
+    accent: "orange" as const,
   },
   {
     title: "20,000+ sq ft Facility",
     description: "Two-building complex with foam pit, trampolines, ninja rig, and more.",
     icon: "building" as const,
+    image: images.facilityOverview,
+    accent: "teal" as const,
   },
 ] as const;
 
