@@ -10,16 +10,20 @@ import { programCategories, programHighlights, programs } from "@/data/programs"
 import { cn } from "@/lib/utils";
 
 const catalogImageClass: Partial<Record<string, string>> = {
-  "preschool-gymnastics": "object-cover object-center",
+  "preschool-gymnastics": "object-contain bg-flip-purple p-3",
+  "shooting-stars-preschool": "object-contain bg-flip-purple p-3",
   "recreational-gymnastics": "object-cover object-[center_40%]",
   "competitive-team": "object-cover object-[center_22%]",
   tumbling: "object-cover object-center",
   ninjanastics: "object-cover object-center",
+  gymstars: "object-cover object-center",
+  "private-lessons": "object-cover object-[center_30%]",
+  "birthday-parties": "object-cover object-center",
+  "summer-camps": "object-cover object-center",
 };
 
 function CatalogCard({ program, index }: { program: Program; index: number }) {
   const imageClass = catalogImageClass[program.slug] ?? "object-cover object-center";
-  const hasPhoto = program.slug !== "shooting-stars-preschool" && program.slug !== "gymstars";
 
   return (
     <motion.div
@@ -32,8 +36,7 @@ function CatalogCard({ program, index }: { program: Program; index: number }) {
         href={`/${program.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-flip-purple/25 hover:shadow-md"
       >
-        {hasPhoto && (
-          <div className="relative aspect-[5/3] overflow-hidden bg-muted">
+        <div className="relative aspect-[5/3] overflow-hidden bg-muted">
             <Image
               src={program.image}
               alt={program.name}
@@ -43,7 +46,6 @@ function CatalogCard({ program, index }: { program: Program; index: number }) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-flip-black/20 to-transparent" />
           </div>
-        )}
 
         <div className="flex flex-1 flex-col p-5">
           <Badge variant="outline" className="mb-3 w-fit text-xs">

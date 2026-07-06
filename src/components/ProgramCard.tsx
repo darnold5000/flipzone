@@ -10,7 +10,7 @@ import type { Program } from "@/data/programs";
 import { cn } from "@/lib/utils";
 
 const featuredImageClass: Partial<Record<string, string>> = {
-  "preschool-gymnastics": "object-cover object-center",
+  "preschool-gymnastics": "object-contain bg-flip-purple p-3",
   "recreational-gymnastics": "object-cover object-[center_40%]",
   "competitive-team": "object-cover object-[center_22%]",
   tumbling: "object-cover object-center",

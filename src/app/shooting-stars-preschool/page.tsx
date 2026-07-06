@@ -15,7 +15,7 @@ export const metadata = createMetadata({
   description:
     "SSGNL is Hendricks County's first fitness-based educational preschool since 2007. PreK and 3's programs with daily gymnastics at The Flip Zone in Plainfield, Indiana.",
   path: "/shooting-stars-preschool",
-  image: images.ssgnl,
+  image: images.programSsgnl,
 });
 
 export default function ShootingStarsPreschoolPage() {

@@ -22,7 +22,7 @@ export const metadata = createMetadata({
   description:
     "Preschool gymnastics classes in Plainfield, Indiana for ages 5 and under. Parent & Tot, Threes & Fours, and KinderStars — building confidence through movement.",
   path: "/preschool-gymnastics",
-  image: images.preschool,
+  image: images.programPreschool,
 });
 
 export default function PreschoolPage() {

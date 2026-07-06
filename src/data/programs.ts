@@ -201,7 +201,7 @@ export const programs: Program[] = [
       "Patient, trained coaches",
       "Small class sizes",
     ],
-    image: images.gymstars,
+    image: images.birthday,
     enrollUrl: site.iclasspro.classes,
   },
   {
@@ -227,7 +227,7 @@ export const programs: Program[] = [
       "Special events: orchard, Children's Museum, aquatic center, and more",
     ],
     goals: "Learn, move, and grow in a unique fitness-based preschool",
-    image: images.ssgnl,
+    image: images.programSsgnl,
     enrollUrl: site.iclasspro.portal,
     faqs: [
       {
@@ -271,7 +271,7 @@ export const programs: Program[] = [
       "Flexible scheduling",
       "Customized training plan",
     ],
-    image: images.recreational,
+    image: images.programPrivateLessons,
     enrollUrl: site.iclasspro.classes,
   },
   {
@@ -291,7 +291,7 @@ export const programs: Program[] = [
       "$250 for up to 10 children (active families)",
       "Additional children $15 each",
     ],
-    image: images.birthday,
+    image: images.programBirthdayParties,
     enrollUrl: site.iclasspro.portal,
   },
   {
@@ -335,7 +335,7 @@ export const programs: Program[] = [
       "Payment plans available",
       "Bring lunch and water daily",
     ],
-    image: images.camps,
+    image: images.programSummerCamps,
     enrollUrl: site.iclasspro.classes,
   },
 ];
