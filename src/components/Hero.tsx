@@ -89,9 +89,8 @@ export function Hero({
             >
               <ButtonLink
                 size="lg"
-                variant="accent"
                 href="/programs#class-finder"
-                className="rounded-2xl px-8"
+                className="rounded-2xl bg-flip-white px-8 text-flip-purple hover:bg-flip-silver"
               >
                 Find Classes
               </ButtonLink>

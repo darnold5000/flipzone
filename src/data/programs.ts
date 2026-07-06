@@ -322,18 +322,18 @@ export function getProgram(slug: string): Program | undefined {
 }
 
 export const classFinderMap: Record<string, Record<string, string>> = {
-  "walking-3": {
+  "parent-tot": {
     gymnastics: "preschool-gymnastics",
     preschool: "preschool-gymnastics",
     default: "preschool-gymnastics",
   },
-  "3-5": {
+  preschool: {
     gymnastics: "preschool-gymnastics",
     preschool: "preschool-gymnastics",
     ninja: "ninjanastics",
     default: "preschool-gymnastics",
   },
-  "6-8": {
+  "5-8": {
     gymnastics: "recreational-gymnastics",
     tumbling: "tumbling",
     ninja: "ninjanastics",

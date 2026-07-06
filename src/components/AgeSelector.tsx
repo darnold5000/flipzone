@@ -24,7 +24,7 @@ export function AgeSelector({
 }: AgeSelectorProps) {
   return (
     <div>
-      <h3 className="mb-5 font-heading text-xl font-bold text-foreground">{label}</h3>
+      <h3 className="mb-4 font-heading text-lg font-bold text-foreground">{label}</h3>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {options.map((option) => (
           <motion.button
@@ -34,13 +34,13 @@ export function AgeSelector({
             whileTap={{ scale: 0.98 }}
             onClick={() => onSelect(option.id)}
             className={cn(
-              "rounded-2xl border-2 p-5 text-left transition-all",
+              "rounded-2xl border-2 p-4 text-left transition-all",
               selected === option.id
-                ? "border-flip-aqua bg-flip-aqua/10 shadow-md"
-                : "border-border bg-card hover:border-flip-aqua/50 hover:shadow-sm",
+                ? "border-flip-purple bg-flip-purple/5 shadow-md"
+                : "border-border bg-card hover:border-flip-purple/40 hover:shadow-sm",
             )}
           >
-            <span className="font-heading text-lg font-bold text-foreground">{option.label}</span>
+            <span className="font-heading font-bold text-foreground">{option.label}</span>
             {option.description && (
               <p className="mt-1 text-sm text-muted-foreground">{option.description}</p>
             )}

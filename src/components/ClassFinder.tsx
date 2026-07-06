@@ -11,9 +11,9 @@ import { Badge } from "@/components/ui/badge";
 import { classFinderMap, getProgram, programs } from "@/data/programs";
 
 const ageOptions = [
-  { id: "walking-3", label: "Walking – 3", description: "Parent & tot, first movers" },
-  { id: "3-5", label: "3 – 5", description: "Preschool gymnastics" },
-  { id: "6-8", label: "6 – 8", description: "Early elementary" },
+  { id: "parent-tot", label: "Parent & Tot", description: "Walking – 3 years" },
+  { id: "preschool", label: "Preschool", description: "Ages 3–5" },
+  { id: "5-8", label: "5–8", description: "Early elementary" },
   { id: "9-plus", label: "9+", description: "Older kids & teens" },
   { id: "competitive", label: "Competitive", description: "Team-ready athletes" },
 ];
@@ -22,16 +22,16 @@ const interestOptions = [
   { id: "gymnastics", label: "Gymnastics", description: "Vault, bars, beam, floor" },
   { id: "tumbling", label: "Tumbling", description: "Flips, handsprings, aerials" },
   { id: "ninja", label: "Ninja", description: "Obstacle courses & agility" },
-  { id: "preschool", label: "Preschool", description: "Early movement & fun" },
   { id: "team", label: "Team", description: "Competitive gymnastics" },
+  { id: "preschool", label: "Preschool", description: "Early movement & fun" },
+  { id: "private-lessons", label: "Private Lessons", description: "One-on-one coaching" },
 ];
 
 interface ClassFinderProps {
   showImage?: boolean;
-  prominent?: boolean;
 }
 
-export function ClassFinder({ showImage = true, prominent = false }: ClassFinderProps) {
+export function ClassFinder({ showImage = false }: ClassFinderProps) {
   const [step, setStep] = useState(1);
   const [age, setAge] = useState<string | null>(null);
   const [interest, setInterest] = useState<string | null>(null);
@@ -60,40 +60,25 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
   };
 
   return (
-    <section
-      id="class-finder"
-      className={
-        prominent
-          ? "relative -mt-8 section-padding bg-gradient-to-b from-flip-lavender via-white to-white pb-20 pt-4 sm:-mt-12"
-          : "section-padding bg-flip-soft-blue/60"
-      }
-    >
+    <section id="class-finder" className="section-padding bg-muted/50">
       <div className="container-wide">
         <div className="mb-10 text-center">
-          {prominent && (
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-flip-aqua">
-              Start here
-            </p>
-          )}
-          <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl lg:text-5xl">
-            Find the Right Class
+          <Badge className="mb-4 bg-flip-silver/20 text-flip-purple">Class Finder</Badge>
+          <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
+            Find My Child&apos;s Class
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-muted-foreground sm:text-lg">
-            Two quick questions — we&apos;ll point you to the perfect program.
+          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+            Answer two quick questions and we&apos;ll recommend the perfect program for your child.
           </p>
         </div>
 
-        <div
-          className={`mx-auto max-w-4xl rounded-3xl border border-flip-purple/10 bg-card p-6 shadow-xl shadow-flip-purple/5 sm:p-10 ${
-            prominent ? "ring-1 ring-flip-aqua/20" : ""
-          }`}
-        >
+        <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-card p-6 shadow-lg sm:p-10">
           <div className="mb-8 flex items-center justify-center gap-2">
             {[1, 2, 3].map((s) => (
               <div
                 key={s}
-                className={`h-2.5 rounded-full transition-all ${
-                  step >= s ? "w-14 bg-flip-aqua" : "w-8 bg-border"
+                className={`h-2 rounded-full transition-all ${
+                  step >= s ? "w-12 bg-flip-purple" : "w-8 bg-border"
                 }`}
               />
             ))}
@@ -126,9 +111,9 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
                   options={interestOptions}
                   selected={interest}
                   onSelect={handleInterestSelect}
-                  label="What are they interested in?"
+                  label="What interests them?"
                 />
-                <Button variant="ghost" className="mt-4 text-flip-purple" onClick={() => setStep(1)}>
+                <Button variant="ghost" className="mt-4" onClick={() => setStep(1)}>
                   ← Back
                 </Button>
               </motion.div>
@@ -142,39 +127,30 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
                 exit={{ opacity: 0 }}
                 className="text-center"
               >
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-flip-aqua/15 px-4 py-2 text-flip-aqua-dark">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-flip-silver/20 px-4 py-2 text-flip-purple">
                   <Sparkles className="size-4" />
                   <span className="font-semibold">We recommend</span>
                 </div>
 
-                <div className="overflow-hidden rounded-3xl border border-border shadow-lg">
+                <div className="overflow-hidden rounded-3xl border border-border">
                   {showImage && (
-                    <div className="relative aspect-[21/9] sm:aspect-[2.4/1]">
+                    <div className="relative aspect-video">
                       <Image
                         src={recommended.image}
                         alt={recommended.name}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 896px"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <Badge className="absolute left-4 top-4 bg-white/95 text-foreground">
-                        {recommended.ageRange}
-                      </Badge>
                     </div>
                   )}
                   <div className="p-6 text-left sm:p-8">
-                    {!showImage && (
-                      <Badge className="mb-3 bg-flip-aqua/15 text-flip-aqua-dark">
-                        {recommended.ageRange}
-                      </Badge>
-                    )}
-                    <h3 className="font-heading text-2xl font-bold text-flip-purple sm:text-3xl">
+                    <Badge className="mb-3">{recommended.ageRange}</Badge>
+                    <h3 className="font-heading text-2xl font-bold text-flip-purple">
                       {recommended.name}
                     </h3>
-                    <p className="mt-3 text-base text-muted-foreground">{recommended.description}</p>
+                    <p className="mt-3 text-muted-foreground">{recommended.description}</p>
                     <div className="mt-6 flex flex-wrap gap-3">
-                      <ButtonAnchor variant="accent" className="rounded-xl" href={recommended.enrollUrl}>
+                      <ButtonAnchor className="rounded-xl" href={recommended.enrollUrl}>
                         Enroll Now
                       </ButtonAnchor>
                       <ButtonLink variant="outline" className="rounded-xl" href={`/${recommended.slug}`}>
@@ -185,7 +161,7 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
                   </div>
                 </div>
 
-                <Button variant="ghost" className="mt-6 text-flip-purple" onClick={reset}>
+                <Button variant="ghost" className="mt-6" onClick={reset}>
                   Start Over
                 </Button>
               </motion.div>
@@ -193,8 +169,8 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
           </AnimatePresence>
         </div>
 
-        <div className="mt-10">
-          <p className="mb-5 text-center text-sm font-medium text-muted-foreground">
+        <div className="mt-12">
+          <p className="mb-6 text-center text-sm font-medium text-muted-foreground">
             Or browse all programs
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -202,7 +178,7 @@ export function ClassFinder({ showImage = true, prominent = false }: ClassFinder
               <Link
                 key={p.slug}
                 href={`/${p.slug}`}
-                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-flip-aqua hover:text-flip-aqua"
+                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-flip-purple hover:text-flip-purple"
               >
                 {p.shortName}
               </Link>

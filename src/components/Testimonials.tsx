@@ -6,7 +6,7 @@ import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section className="section-padding bg-flip-soft-blue">
+    <section className="section-padding bg-flip-purple/5">
       <div className="container-wide">
         <div className="mb-12 text-center">
           <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">

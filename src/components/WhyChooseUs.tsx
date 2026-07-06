@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Building2, Heart, Shield, Star, Trophy, Users } from "lucide-react";
 import { whyChooseUs, site } from "@/data/site";
-import { cn } from "@/lib/utils";
 
 const icons = {
   star: Star,
@@ -14,15 +13,6 @@ const icons = {
   trophy: Trophy,
   building: Building2,
 };
-
-const cardBackgrounds = [
-  "bg-card",
-  "bg-flip-lavender",
-  "bg-flip-soft-blue",
-  "bg-card",
-  "bg-flip-lavender",
-  "bg-flip-soft-blue",
-];
 
 function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const ref = useRef(null);
@@ -57,36 +47,35 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
 
 export function WhyChooseUs() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding">
       <div className="container-wide">
         <div className="mb-12 text-center">
           <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
             Why Families Choose Flip Zone
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-muted-foreground sm:text-lg">
-            Helping kids grow stronger, more confident, and more courageous.
+          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+            A supportive community where every child builds confidence, skills, and friendships.
           </p>
         </div>
 
-        <div className="mb-14 flex flex-wrap justify-center gap-10">
+        <div className="mb-12 flex flex-wrap justify-center gap-8">
           <div className="text-center">
-            <p className="font-heading text-4xl font-bold text-flip-aqua sm:text-5xl">
+            <p className="font-heading text-4xl font-bold text-flip-purple">
               <AnimatedCounter value={site.stats.sqft} suffix="+" />
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">sq ft facility</p>
+            <p className="text-sm text-muted-foreground">sq ft facility</p>
           </div>
           <div className="text-center">
-            <p className="font-heading text-4xl font-bold text-flip-purple sm:text-5xl">
+            <p className="font-heading text-4xl font-bold text-flip-purple">
               <AnimatedCounter value={site.stats.yearsServing} suffix="+" />
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">years serving Indiana families</p>
+            <p className="text-sm text-muted-foreground">years serving Indiana families</p>
           </div>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((item, i) => {
             const Icon = icons[item.icon];
-            const isTrophy = item.icon === "trophy";
             return (
               <motion.div
                 key={item.title}
@@ -94,23 +83,13 @@ export function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className={cn(
-                  "rounded-3xl border border-border/60 p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg",
-                  cardBackgrounds[i],
-                )}
+                className="rounded-3xl border border-border bg-card p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg"
               >
-                <div
-                  className={cn(
-                    "mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl",
-                    isTrophy ? "bg-flip-gold/20" : "bg-flip-aqua/15",
-                  )}
-                >
-                  <Icon
-                    className={cn("size-7", isTrophy ? "text-flip-gold" : "text-flip-aqua")}
-                  />
+                <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-flip-purple/10">
+                  <Icon className="size-7 text-flip-purple" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-flip-purple">{item.title}</h3>
-                <p className="mt-2 text-base text-muted-foreground">{item.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             );
           })}

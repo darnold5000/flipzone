@@ -44,9 +44,12 @@ export function CTA({
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <ButtonLink
             size="lg"
-            variant="accent"
             href={primaryHref}
-            className="rounded-2xl px-8"
+            className={`rounded-2xl px-8 ${
+              variant === "gradient"
+                ? "bg-flip-white text-flip-purple hover:bg-flip-silver"
+                : ""
+            }`}
           >
             {primaryLabel}
           </ButtonLink>
