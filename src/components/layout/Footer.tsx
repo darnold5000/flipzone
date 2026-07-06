@@ -4,7 +4,7 @@ import { site, navLinks } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-flip-blue text-white">
+    <footer className="border-t border-flip-black/20 bg-flip-black text-white">
       <div className="container-wide section-padding grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className="mb-4 font-heading text-xl font-bold">The Flip Zone</h3>

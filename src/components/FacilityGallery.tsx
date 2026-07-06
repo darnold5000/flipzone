@@ -18,7 +18,7 @@ export function FacilityGallery() {
     <section className="section-padding">
       <div className="container-wide">
         <div className="mb-12 text-center">
-          <h2 className="font-heading text-3xl font-bold text-flip-blue sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
             Our Facility
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
@@ -60,7 +60,7 @@ export function FacilityGallery() {
               transition={{ delay: i * 0.05 }}
               className="rounded-2xl border border-border bg-card p-5"
             >
-              <h3 className="font-heading font-bold text-flip-blue">{feature.title}</h3>
+              <h3 className="font-heading font-bold text-flip-purple">{feature.title}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}

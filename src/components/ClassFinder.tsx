@@ -27,7 +27,11 @@ const interestOptions = [
   { id: "private-lessons", label: "Private Lessons", description: "One-on-one coaching" },
 ];
 
-export function ClassFinder() {
+interface ClassFinderProps {
+  showImage?: boolean;
+}
+
+export function ClassFinder({ showImage = false }: ClassFinderProps) {
   const [step, setStep] = useState(1);
   const [age, setAge] = useState<string | null>(null);
   const [interest, setInterest] = useState<string | null>(null);
@@ -59,8 +63,8 @@ export function ClassFinder() {
     <section id="class-finder" className="section-padding bg-muted/50">
       <div className="container-wide">
         <div className="mb-10 text-center">
-          <Badge className="mb-4 bg-flip-aqua/20 text-flip-blue">Class Finder</Badge>
-          <h2 className="font-heading text-3xl font-bold text-flip-blue sm:text-4xl">
+          <Badge className="mb-4 bg-flip-silver/20 text-flip-purple">Class Finder</Badge>
+          <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
             Find My Child&apos;s Class
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
@@ -74,7 +78,7 @@ export function ClassFinder() {
               <div
                 key={s}
                 className={`h-2 rounded-full transition-all ${
-                  step >= s ? "w-12 bg-flip-blue" : "w-8 bg-border"
+                  step >= s ? "w-12 bg-flip-purple" : "w-8 bg-border"
                 }`}
               />
             ))}
@@ -123,23 +127,25 @@ export function ClassFinder() {
                 exit={{ opacity: 0 }}
                 className="text-center"
               >
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-flip-aqua/20 px-4 py-2 text-flip-blue">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-flip-silver/20 px-4 py-2 text-flip-purple">
                   <Sparkles className="size-4" />
                   <span className="font-semibold">We recommend</span>
                 </div>
 
                 <div className="overflow-hidden rounded-3xl border border-border">
-                  <div className="relative aspect-video">
-                    <Image
-                      src={recommended.image}
-                      alt={recommended.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  {showImage && (
+                    <div className="relative aspect-video">
+                      <Image
+                        src={recommended.image}
+                        alt={recommended.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="p-6 text-left sm:p-8">
                     <Badge className="mb-3">{recommended.ageRange}</Badge>
-                    <h3 className="font-heading text-2xl font-bold text-flip-blue">
+                    <h3 className="font-heading text-2xl font-bold text-flip-purple">
                       {recommended.name}
                     </h3>
                     <p className="mt-3 text-muted-foreground">{recommended.description}</p>
@@ -172,7 +178,7 @@ export function ClassFinder() {
               <Link
                 key={p.slug}
                 href={`/${p.slug}`}
-                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-flip-blue hover:text-flip-blue"
+                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-colors hover:border-flip-purple hover:text-flip-purple"
               >
                 {p.shortName}
               </Link>

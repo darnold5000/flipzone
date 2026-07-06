@@ -22,16 +22,19 @@ export default function HomePage() {
       <Hero
         title={site.tagline}
         subtitle="Preschool • Recreational • Tumbling • Ninja • Competitive Team"
-        image={images.hero}
+        image={images.heroTeam}
+        imageAlt="The Flip Zone competitive gymnastics team in Plainfield, Indiana"
+        overlay="team"
+        imagePosition="center 35%"
       />
 
-      <ClassFinder />
+      <ClassFinder showImage />
 
       <section className="section-padding">
         <div className="container-wide">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h2 className="font-heading text-3xl font-bold text-flip-blue sm:text-4xl">
+              <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
                 Our Programs
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
@@ -42,7 +45,7 @@ export default function HomePage() {
               View All Programs
             </ButtonLink>
           </div>
-          <ProgramGrid programs={featuredPrograms} variant="featured" />
+          <ProgramGrid programs={featuredPrograms} variant="featured" showImage />
         </div>
       </section>
 
@@ -56,7 +59,7 @@ export default function HomePage() {
         <div className="container-wide">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h2 className="font-heading text-3xl font-bold text-flip-blue sm:text-4xl">
+              <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
                 Meet the Coaches
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
@@ -69,7 +72,7 @@ export default function HomePage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featuredCoaches.map((coach, i) => (
-              <CoachCard key={coach.name} coach={coach} index={i} />
+              <CoachCard key={coach.name} coach={coach} index={i} showImage />
             ))}
           </div>
         </div>

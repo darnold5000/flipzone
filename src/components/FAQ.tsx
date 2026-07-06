@@ -32,7 +32,7 @@ export function FAQ({ items, showCategories = false }: FAQProps) {
         return (
           <div key={cat ?? "all"}>
             {cat && showCategories && (
-              <h3 className="mb-4 font-heading text-xl font-bold text-flip-blue">
+              <h3 className="mb-4 font-heading text-xl font-bold text-flip-purple">
                 {catLabels[cat]}
               </h3>
             )}

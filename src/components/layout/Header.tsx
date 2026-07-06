@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button, ButtonLink, ButtonAnchor } from "@/components/ui/button";
@@ -11,19 +12,27 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur-md">
       <div className="container-wide flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src={images.logo}
-            alt={site.name}
-            width={44}
-            height={44}
-            className="rounded-full"
-          />
-          <span className="font-heading text-lg font-bold text-flip-blue sm:text-xl">
+          {isHome ? (
+            <Image
+              src={images.logo}
+              alt={site.name}
+              width={44}
+              height={44}
+              className="rounded-full"
+            />
+          ) : (
+            <span className="flex size-11 items-center justify-center rounded-full bg-flip-purple font-heading text-lg font-bold text-white">
+              FZ
+            </span>
+          )}
+          <span className="font-heading text-lg font-bold text-flip-purple sm:text-xl">
             The Flip Zone
           </span>
         </Link>
@@ -33,7 +42,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-flip-blue"
+              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-flip-purple"
             >
               {link.label}
             </Link>

@@ -5,12 +5,14 @@ interface ProgramGridProps {
   programs: Program[];
   variant?: "default" | "compact" | "featured";
   columns?: 2 | 3 | 4;
+  showImage?: boolean;
 }
 
 export function ProgramGrid({
   programs,
   variant = "default",
   columns = 3,
+  showImage = false,
 }: ProgramGridProps) {
   const gridCols = {
     2: "md:grid-cols-2",
@@ -22,7 +24,13 @@ export function ProgramGrid({
     return (
       <div className="grid gap-3 sm:grid-cols-2">
         {programs.map((program, i) => (
-          <ProgramCard key={program.slug} program={program} variant="compact" index={i} />
+          <ProgramCard
+            key={program.slug}
+            program={program}
+            variant="compact"
+            index={i}
+            showImage={showImage}
+          />
         ))}
       </div>
     );
@@ -36,6 +44,7 @@ export function ProgramGrid({
           program={program}
           variant={variant}
           index={i}
+          showImage={showImage}
         />
       ))}
     </div>

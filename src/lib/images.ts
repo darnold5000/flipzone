@@ -10,7 +10,8 @@ export function wixImage(
 
 export const images = {
   logo: wixImage("3c407f_f92aab5f784344a78fe846a7a2144181", "png", 400, 400),
-  hero: wixImage("3c407f_38bea8ee7e854a5a93fae89b31aa5c1f", "jpg", 1920, 1080),
+  hero: "/images/hero-team.png",
+  heroTeam: "/images/hero-team.png",
   facility: wixImage("3c407f_13a9a9f4073540be9a657fbc9a0bb6f0", "png", 1600, 900),
   preschool: wixImage("3c407f_20c4205ef7d447b9b93eca2fbf73055d", "jpg", 1200, 800),
   recreational: wixImage("3c407f_76362b8ee1a44252a7d590af253908e6", "jpg", 1200, 800),

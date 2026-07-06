@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Trophy, Medal, Users } from "lucide-react";
 import { ProgramPageTemplate } from "@/components/programs/ProgramPageTemplate";
 import { CoachCard } from "@/components/CoachCard";
@@ -46,7 +45,7 @@ export default function CompetitiveTeamPage() {
       />
       <ProgramPageTemplate program={program} />
 
-      <section className="section-padding bg-flip-blue text-white">
+      <section className="section-padding bg-flip-purple text-white">
         <div className="container-wide">
           <h2 className="mb-4 font-heading text-3xl font-bold">Team Philosophy</h2>
           <p className="max-w-3xl text-lg leading-relaxed text-white/90">
@@ -60,7 +59,7 @@ export default function CompetitiveTeamPage() {
 
       <section className="section-padding">
         <div className="container-wide">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
             Competitive Levels
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -72,7 +71,7 @@ export default function CompetitiveTeamPage() {
                 <div className="mb-3 flex size-12 items-center justify-center rounded-2xl bg-flip-purple/10">
                   <Medal className="size-6 text-flip-purple" />
                 </div>
-                <h3 className="font-heading text-xl font-bold text-flip-blue">{level.name}</h3>
+                <h3 className="font-heading text-xl font-bold text-flip-purple">{level.name}</h3>
                 <p className="mt-2 text-muted-foreground">{level.description}</p>
               </div>
             ))}
@@ -82,7 +81,7 @@ export default function CompetitiveTeamPage() {
 
       <section className="section-padding bg-muted/50">
         <div className="container-wide">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
             Achievements
           </h2>
           <div className="grid gap-6 sm:grid-cols-3">
@@ -92,8 +91,8 @@ export default function CompetitiveTeamPage() {
               { icon: Users, title: "National Stage", desc: "Qualifiers for Easterns and Nationals" },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl bg-card p-6 text-center">
-                <item.icon className="mx-auto size-10 text-flip-aqua" />
-                <h3 className="mt-4 font-heading font-bold text-flip-blue">{item.title}</h3>
+                <item.icon className="mx-auto size-10 text-flip-silver" />
+                <h3 className="mt-4 font-heading font-bold text-flip-purple">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
@@ -103,7 +102,7 @@ export default function CompetitiveTeamPage() {
 
       <section className="section-padding">
         <div className="container-wide">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+          <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
             Team Coaches
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -115,26 +114,21 @@ export default function CompetitiveTeamPage() {
       </section>
 
       <section className="section-padding bg-muted/50">
-        <div className="container-wide grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-video overflow-hidden rounded-3xl">
-            <Image src={images.facility} alt="Team training facility" fill className="object-cover" />
-          </div>
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-flip-blue">
-              Team Training Center
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Our dedicated Team Training Center provides a dynamic and safe environment
-              for athletes to push their boundaries. State-of-the-art equipment, a 400 sq ft
-              foam pit, and competition-grade apparatus support every level of training.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              For team inquiries, call{" "}
-              <a href={`tel:${site.phones.teamPreschool}`} className="font-semibold text-flip-blue">
-                {site.phones.teamPreschool}
-              </a>
-            </p>
-          </div>
+        <div className="container-wide max-w-3xl">
+          <h2 className="font-heading text-3xl font-bold text-flip-purple">
+            Team Training Center
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Our dedicated Team Training Center provides a dynamic and safe environment
+            for athletes to push their boundaries. State-of-the-art equipment, a 400 sq ft
+            foam pit, and competition-grade apparatus support every level of training.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            For team inquiries, call{" "}
+            <a href={`tel:${site.phones.teamPreschool}`} className="font-semibold text-flip-purple">
+              {site.phones.teamPreschool}
+            </a>
+          </p>
         </div>
       </section>
     </>

@@ -1,28 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { Camera } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { CTA } from "@/components/CTA";
-import { galleryImages, galleryCategories, type GalleryCategory } from "@/data/gallery";
-import { images } from "@/lib/images";
+import { galleryCategories, type GalleryCategory } from "@/data/gallery";
 import { cn } from "@/lib/utils";
 
 export function GalleryContent() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory | "all">("all");
 
-  const filtered =
+  const categories =
     activeCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === activeCategory);
+      ? galleryCategories
+      : galleryCategories.filter((c) => c.id === activeCategory);
 
   return (
     <>
       <Hero
         title="Gallery"
         subtitle="Action, smiles, and moments that matter"
-        image={images.hero}
         size="medium"
         showButtons={false}
         align="center"
@@ -37,7 +35,7 @@ export function GalleryContent() {
               className={cn(
                 "rounded-full px-5 py-2 text-sm font-medium transition-all",
                 activeCategory === "all"
-                  ? "bg-flip-blue text-white"
+                  ? "bg-flip-purple text-white"
                   : "bg-muted text-muted-foreground hover:bg-muted/80",
               )}
             >
@@ -51,7 +49,7 @@ export function GalleryContent() {
                 className={cn(
                   "rounded-full px-5 py-2 text-sm font-medium transition-all",
                   activeCategory === cat.id
-                    ? "bg-flip-blue text-white"
+                    ? "bg-flip-purple text-white"
                     : "bg-muted text-muted-foreground hover:bg-muted/80",
                 )}
               >
@@ -60,29 +58,18 @@ export function GalleryContent() {
             ))}
           </div>
 
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {filtered.map((img, i) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((cat, i) => (
               <motion.div
-                key={`${img.src}-${i}`}
+                key={cat.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="mb-4 break-inside-avoid overflow-hidden rounded-2xl"
+                className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-muted/30 p-12 text-center"
               >
-                <div className="group relative">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={img.width ?? 800}
-                    height={img.height ?? 600}
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
-                    <p className="absolute bottom-4 left-4 text-sm font-medium text-white">
-                      {img.alt}
-                    </p>
-                  </div>
-                </div>
+                <Camera className="mb-4 size-10 text-flip-purple/40" />
+                <h3 className="font-heading text-lg font-bold text-flip-purple">{cat.label}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Photos coming soon</p>
               </motion.div>
             ))}
           </div>

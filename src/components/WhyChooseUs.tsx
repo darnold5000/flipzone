@@ -50,7 +50,7 @@ export function WhyChooseUs() {
     <section className="section-padding">
       <div className="container-wide">
         <div className="mb-12 text-center">
-          <h2 className="font-heading text-3xl font-bold text-flip-blue sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
             Why Families Choose Flip Zone
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
@@ -60,7 +60,7 @@ export function WhyChooseUs() {
 
         <div className="mb-12 flex flex-wrap justify-center gap-8">
           <div className="text-center">
-            <p className="font-heading text-4xl font-bold text-flip-blue">
+            <p className="font-heading text-4xl font-bold text-flip-purple">
               <AnimatedCounter value={site.stats.sqft} suffix="+" />
             </p>
             <p className="text-sm text-muted-foreground">sq ft facility</p>
@@ -85,10 +85,10 @@ export function WhyChooseUs() {
                 transition={{ delay: i * 0.08 }}
                 className="rounded-3xl border border-border bg-card p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-flip-blue/10">
-                  <Icon className="size-7 text-flip-blue" />
+                <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-flip-purple/10">
+                  <Icon className="size-7 text-flip-purple" />
                 </div>
-                <h3 className="font-heading text-lg font-bold text-flip-blue">{item.title}</h3>
+                <h3 className="font-heading text-lg font-bold text-flip-purple">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             );

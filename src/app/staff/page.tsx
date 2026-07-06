@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import { CoachCard } from "@/components/CoachCard";
 import { CTA } from "@/components/CTA";
 import { staff } from "@/data/staff";
-import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -18,7 +17,6 @@ export default function StaffPage() {
       <Hero
         title="Meet the Flip Zone Family"
         subtitle="Coaches who love what they do — and love your kids"
-        image={images.recreational}
         size="medium"
         showButtons={false}
         align="center"

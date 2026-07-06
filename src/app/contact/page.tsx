@@ -1,11 +1,9 @@
-import Link from "next/link";
 import { Mail, Phone, Share2 } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { LocationMap } from "@/components/LocationMap";
 import { CTA } from "@/components/CTA";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
 import { site } from "@/data/site";
-import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -21,7 +19,6 @@ export default function ContactPage() {
       <Hero
         title="Get in Touch"
         subtitle="We'd love to hear from you"
-        image={images.facility}
         size="medium"
         showButtons={false}
         align="center"
@@ -36,7 +33,7 @@ export default function ContactPage() {
       <section className="section-padding bg-muted/50">
         <div className="container-wide">
           <div className="mx-auto max-w-2xl rounded-3xl border border-border bg-card p-8 text-center shadow-sm">
-            <h2 className="font-heading text-2xl font-bold text-flip-blue">
+            <h2 className="font-heading text-2xl font-bold text-flip-purple">
               Ready to Enroll?
             </h2>
             <p className="mt-3 text-muted-foreground">
@@ -57,9 +54,9 @@ export default function ContactPage() {
               href={site.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-blue"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
             >
-              <Share2 className="size-5 text-flip-blue" />
+              <Share2 className="size-5 text-flip-purple" />
               Facebook
             </a>
             <a
@@ -73,16 +70,16 @@ export default function ContactPage() {
             </a>
             <a
               href={`mailto:${site.email}`}
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-aqua"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-silver"
             >
-              <Mail className="size-5 text-flip-blue" />
+              <Mail className="size-5 text-flip-purple" />
               Email Us
             </a>
             <a
               href={`tel:${site.phones.recreational}`}
-              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-blue"
+              className="flex items-center gap-2 rounded-2xl border border-border bg-card px-6 py-3 transition-colors hover:border-flip-purple"
             >
-              <Phone className="size-5 text-flip-blue" />
+              <Phone className="size-5 text-flip-purple" />
               Call Us
             </a>
           </div>

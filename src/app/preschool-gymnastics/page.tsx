@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Heart, Sparkles, Users, Ear, Zap, Smile } from "lucide-react";
 import { ProgramPageTemplate } from "@/components/programs/ProgramPageTemplate";
 import { getProgram } from "@/data/programs";
@@ -42,7 +41,7 @@ export default function PreschoolPage() {
       />
       <ProgramPageTemplate program={program} />
 
-      <section className="section-padding bg-gradient-to-br from-flip-purple/10 via-flip-aqua/10 to-flip-blue/10">
+      <section className="section-padding bg-gradient-to-br from-flip-purple/10 via-flip-silver/30 to-flip-black/5">
         <div className="container-wide">
           <div className="mb-10 text-center">
             <h2 className="font-heading text-3xl font-bold text-flip-purple sm:text-4xl">
@@ -74,15 +73,11 @@ export default function PreschoolPage() {
       </section>
 
       <section className="section-padding">
-        <div className="container-wide grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image src={images.preschool} alt="Preschool gymnastics" fill className="object-cover" />
-          </div>
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-flip-blue">
-              Class Options
-            </h2>
-            <ul className="mt-6 space-y-4">
+        <div className="container-wide max-w-3xl">
+          <h2 className="font-heading text-3xl font-bold text-flip-purple">
+            Class Options
+          </h2>
+          <ul className="mt-6 space-y-4">
               {[
                 { name: "Parent & Tot", desc: "For walking toddlers with a caregiver" },
                 { name: "Threes & Fours", desc: "Independent classes for 3–4 year olds" },
@@ -90,12 +85,11 @@ export default function PreschoolPage() {
                 { name: "KinderStars", desc: "Kindergarten-age introductory gymnastics" },
               ].map((cls) => (
                 <li key={cls.name} className="rounded-2xl border border-border bg-card p-4">
-                  <h3 className="font-heading font-bold text-flip-blue">{cls.name}</h3>
+                  <h3 className="font-heading font-bold text-flip-purple">{cls.name}</h3>
                   <p className="text-sm text-muted-foreground">{cls.desc}</p>
                 </li>
               ))}
-            </ul>
-          </div>
+          </ul>
         </div>
       </section>
     </>

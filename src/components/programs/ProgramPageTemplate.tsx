@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Hero } from "@/components/Hero";
@@ -43,55 +42,40 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
       <Hero
         title={program.name}
         subtitle={program.perfectFor}
-        image={program.image}
         size="large"
         showButtons={false}
       />
 
       <section className="section-padding">
-        <div className="container-wide">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-            <div>
-              <Badge className="mb-4">{program.ageRange}</Badge>
-              <h2 className="font-heading text-3xl font-bold text-flip-blue">
-                Who It&apos;s For
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                {program.description}
-              </p>
-              {program.goals && (
-                <p className="mt-4 font-medium text-flip-purple">
-                  Goal: {program.goals}
-                </p>
-              )}
-              <ButtonAnchor size="lg" className="mt-8 rounded-2xl" href={program.enrollUrl}>
-                Enroll in {program.shortName}
-              </ButtonAnchor>
-            </div>
-
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-              <Image
-                src={program.image}
-                alt={program.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
+        <div className="container-wide max-w-3xl">
+          <Badge className="mb-4">{program.ageRange}</Badge>
+          <h2 className="font-heading text-3xl font-bold text-flip-purple">
+            Who It&apos;s For
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            {program.description}
+          </p>
+          {program.goals && (
+            <p className="mt-4 font-medium text-flip-purple">
+              Goal: {program.goals}
+            </p>
+          )}
+          <ButtonAnchor size="lg" className="mt-8 rounded-2xl" href={program.enrollUrl}>
+            Enroll in {program.shortName}
+          </ButtonAnchor>
         </div>
       </section>
 
       {program.learnings.length > 0 && (
         <section className="section-padding bg-muted/50">
           <div className="container-wide">
-            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
               What They&apos;ll Learn
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {program.learnings.map((item) => (
                 <div key={item} className="flex items-start gap-3 rounded-2xl bg-card p-4">
-                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-flip-aqua" />
+                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-flip-silver" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -103,7 +87,7 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
       {program.benefits.length > 0 && (
         <section className="section-padding">
           <div className="container-wide">
-            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
               Benefits
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -122,7 +106,7 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
 
       <section className="section-padding bg-muted/50">
         <div className="container-wide max-w-3xl">
-          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-flip-blue">
+          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-flip-purple">
             Frequently Asked Questions
           </h2>
           <FAQ items={pageFaqs} />
@@ -132,7 +116,7 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
       {related.length > 0 && (
         <section className="section-padding">
           <div className="container-wide">
-            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-blue">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-flip-purple">
               Related Programs
             </h2>
             <ProgramGrid programs={related} variant="compact" />

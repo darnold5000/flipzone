@@ -15,12 +15,12 @@ export function EnrollmentBanner({
   enrollUrl = site.iclasspro.classes,
 }: EnrollmentBannerProps) {
   return (
-    <div className="sticky top-16 z-30 border-b border-flip-aqua/30 bg-flip-aqua/10 px-4 py-3">
+    <div className="sticky top-16 z-30 border-b border-flip-silver/30 bg-flip-silver/10 px-4 py-3">
       <div className="container-wide flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm font-medium text-foreground">
           {programName ? (
             <>
-              <span className="font-bold text-flip-blue">{programName}</span> — {message}
+              <span className="font-bold text-flip-purple">{programName}</span> — {message}
             </>
           ) : (
             message

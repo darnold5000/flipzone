@@ -36,8 +36,8 @@ export function AgeSelector({
             className={cn(
               "rounded-2xl border-2 p-4 text-left transition-all",
               selected === option.id
-                ? "border-flip-blue bg-flip-blue/5 shadow-md"
-                : "border-border bg-card hover:border-flip-blue/40 hover:shadow-sm",
+                ? "border-flip-purple bg-flip-purple/5 shadow-md"
+                : "border-border bg-card hover:border-flip-purple/40 hover:shadow-sm",
             )}
           >
             <span className="font-heading font-bold text-foreground">{option.label}</span>

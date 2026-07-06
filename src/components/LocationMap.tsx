@@ -22,11 +22,11 @@ export function LocationMap() {
 
       <div className="flex flex-col justify-center space-y-6">
         <div className="flex items-start gap-4">
-          <div className="rounded-2xl bg-flip-blue/10 p-3">
-            <MapPin className="size-6 text-flip-blue" />
+          <div className="rounded-2xl bg-flip-purple/10 p-3">
+            <MapPin className="size-6 text-flip-purple" />
           </div>
           <div>
-            <h3 className="font-heading font-bold text-flip-blue">Address</h3>
+            <h3 className="font-heading font-bold text-flip-purple">Address</h3>
             <p className="mt-1 text-muted-foreground">{site.address.full}</p>
             <p className="mt-1 text-sm text-muted-foreground">
               Serving Plainfield, Avon, Brownsburg &amp; Hendricks County
@@ -39,14 +39,14 @@ export function LocationMap() {
             <Phone className="size-6 text-flip-purple" />
           </div>
           <div>
-            <h3 className="font-heading font-bold text-flip-blue">Phone</h3>
+            <h3 className="font-heading font-bold text-flip-purple">Phone</h3>
             <p className="mt-1">
-              <a href={`tel:${site.phones.recreational}`} className="text-muted-foreground hover:text-flip-blue">
+              <a href={`tel:${site.phones.recreational}`} className="text-muted-foreground hover:text-flip-purple">
                 Rec Gym: {site.phones.recreational}
               </a>
             </p>
             <p>
-              <a href={`tel:${site.phones.teamPreschool}`} className="text-muted-foreground hover:text-flip-blue">
+              <a href={`tel:${site.phones.teamPreschool}`} className="text-muted-foreground hover:text-flip-purple">
                 Team/SSGNL: {site.phones.teamPreschool}
               </a>
             </p>
@@ -54,23 +54,23 @@ export function LocationMap() {
         </div>
 
         <div className="flex items-start gap-4">
-          <div className="rounded-2xl bg-flip-aqua/20 p-3">
-            <Mail className="size-6 text-flip-blue" />
+          <div className="rounded-2xl bg-flip-silver/20 p-3">
+            <Mail className="size-6 text-flip-purple" />
           </div>
           <div>
-            <h3 className="font-heading font-bold text-flip-blue">Email</h3>
-            <a href={`mailto:${site.email}`} className="mt-1 text-muted-foreground hover:text-flip-blue">
+            <h3 className="font-heading font-bold text-flip-purple">Email</h3>
+            <a href={`mailto:${site.email}`} className="mt-1 text-muted-foreground hover:text-flip-purple">
               {site.email}
             </a>
           </div>
         </div>
 
         <div className="flex items-start gap-4">
-          <div className="rounded-2xl bg-flip-blue/10 p-3">
-            <Clock className="size-6 text-flip-blue" />
+          <div className="rounded-2xl bg-flip-purple/10 p-3">
+            <Clock className="size-6 text-flip-purple" />
           </div>
           <div>
-            <h3 className="font-heading font-bold text-flip-blue">Hours</h3>
+            <h3 className="font-heading font-bold text-flip-purple">Hours</h3>
             <ul className="mt-1 space-y-1 text-muted-foreground">
               <li>{site.hours.weekdays}</li>
               <li>{site.hours.saturday}</li>

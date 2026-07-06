@@ -28,7 +28,7 @@ export function CTA({
     <section
       className={
         variant === "gradient"
-          ? "section-padding bg-gradient-to-br from-flip-blue via-flip-purple to-flip-blue text-white"
+          ? "section-padding bg-uniform-gradient text-white"
           : "section-padding bg-muted/50"
       }
     >
@@ -47,7 +47,7 @@ export function CTA({
             href={primaryHref}
             className={`rounded-2xl px-8 ${
               variant === "gradient"
-                ? "bg-white text-flip-blue hover:bg-white/90"
+                ? "bg-flip-white text-flip-purple hover:bg-flip-silver"
                 : ""
             }`}
           >
