@@ -43,7 +43,7 @@ export function ProgramPageTemplate({ program }: ProgramPageTemplateProps) {
         seed={program.slug}
         title={program.name}
         subtitle={program.perfectFor}
-        size="large"
+        size="medium"
         showButtons={false}
       />
 

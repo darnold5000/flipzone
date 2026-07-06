@@ -19,7 +19,7 @@ export default function AboutPage() {
         seed="about"
         title="More Than a Gym"
         subtitle="A supportive community building confidence through gymnastics"
-        size="large"
+        size="medium"
         showButtons={false}
         align="center"
       />
