@@ -1,3 +1,4 @@
+import type { CoachProfileFields } from "@/components/CoachCard";
 import { coachPhoto } from "@/lib/images";
 
 export interface Coach {
@@ -93,5 +94,34 @@ export const staff: Coach[] = [
     name: "Lauren Gentry",
     role: "SSGNL Preschool Teacher",
     image: coachPhoto("3c407f_a677b389973c4d069067ff62ae94286c", "jpeg"),
+  },
+];
+
+/** Sample content for staff profile preview cards — not real bios. */
+export const staffProfilePreviews: {
+  coach: Coach;
+  placeholders: CoachProfileFields;
+}[] = [
+  {
+    coach: staff[0],
+    placeholders: {
+      bio: "Founded Flip Zone with a vision of building confidence through gymnastics for every child in Hendricks County.",
+      specialties: ["Leadership", "Program Development", "Preschool & Team"],
+      certifications: ["USA Gymnastics"],
+      experience: "20+ years",
+      favoriteEvent: "Floor",
+      funFact: "Believes every child deserves a coach who sees their potential on day one.",
+    },
+  },
+  {
+    coach: staff[1],
+    placeholders: {
+      bio: "Leads our competitive program with a focus on strong fundamentals, athlete growth, and long-term success.",
+      specialties: ["Competitive Gymnastics", "USAG", "NGA"],
+      certifications: ["USA Gymnastics"],
+      experience: "15+ years",
+      favoriteEvent: "High Bar",
+      funFact: "Has coached athletes to state, regional, and national competitions.",
+    },
   },
 ];
