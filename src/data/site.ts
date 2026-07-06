@@ -96,6 +96,52 @@ export const whyChooseUs = [
   },
 ] as const;
 
+export const aboutDifferentiators = [
+  {
+    title: "20,000+ sq ft",
+    description:
+      "Two-building complex with foam pit, trampolines, ninja rig, and competition equipment.",
+    icon: "building" as const,
+    accent: "teal" as const,
+  },
+  {
+    title: "All Ages & Levels",
+    description:
+      "Preschool through competitive team — plus tumbling, ninja, and special needs programs.",
+    icon: "users" as const,
+    accent: "purple" as const,
+  },
+  {
+    title: "SSGNL Preschool",
+    description:
+      "Hendricks County's first fitness-based educational preschool program since 2007.",
+    icon: "graduation" as const,
+    accent: "purple" as const,
+    href: "/shooting-stars-preschool",
+  },
+  {
+    title: "SafeSport Committed",
+    description:
+      "USA Gymnastics affiliated with certified, background-checked coaching staff.",
+    icon: "shield" as const,
+    accent: "teal" as const,
+  },
+  {
+    title: "Competitive Excellence",
+    description:
+      "State, regional, and national success with USAG and NGA competitive pathways.",
+    icon: "trophy" as const,
+    accent: "orange" as const,
+  },
+  {
+    title: "Family-Friendly",
+    description:
+      "Comfortable viewing areas, birthday parties, open gym, and summer camps.",
+    icon: "heart" as const,
+    accent: "coral" as const,
+  },
+] as const;
+
 export const facilityFeatures = [
   { title: "Foam Pit", description: "400 sq ft loose foam pit for safe landings" },
   { title: "Bars & Beam", description: "Full Olympic-style equipment for all levels" },

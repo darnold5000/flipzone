@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { AboutDifferentiators } from "@/components/AboutDifferentiators";
 import { CTA } from "@/components/CTA";
 import { ButtonLink } from "@/components/ui/button";
 import { site } from "@/data/site";
@@ -49,58 +49,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-muted/50">
-        <div className="container-wide">
-          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-flip-purple">
-            What Makes Us Different
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "20,000+ sq ft",
-                desc: "Two-building complex with foam pit, trampolines, ninja rig, and competition equipment.",
-              },
-              {
-                title: "All Ages & Levels",
-                desc: "Preschool through competitive team — plus tumbling, ninja, and special needs programs.",
-              },
-              {
-                title: "SSGNL Preschool",
-                desc: "Hendricks County's first fitness-based educational preschool program since 2007.",
-                href: "/shooting-stars-preschool",
-              },
-              {
-                title: "SafeSport Committed",
-                desc: "USA Gymnastics affiliated with certified, background-checked coaching staff.",
-              },
-              {
-                title: "Competitive Excellence",
-                desc: "State, regional, and national success with USAG and NGA competitive pathways.",
-              },
-              {
-                title: "Family-Friendly",
-                desc: "Comfortable viewing areas, birthday parties, open gym, and summer camps.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-3xl border border-border bg-card p-6">
-                {"href" in item && item.href ? (
-                  <Link href={item.href} className="group block">
-                    <h3 className="font-heading text-lg font-bold text-flip-purple group-hover:underline">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-muted-foreground">{item.desc}</p>
-                  </Link>
-                ) : (
-                  <>
-                    <h3 className="font-heading text-lg font-bold text-flip-purple">{item.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{item.desc}</p>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AboutDifferentiators />
 
       <section className="section-padding">
         <div className="container-wide text-center">
