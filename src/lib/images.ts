@@ -20,6 +20,7 @@ export const images = {
   aboutHero: "/images/about-hero.png",
   programsHero: "/images/heroes/programs-hero.png",
   staffHero: "/images/heroes/staff-hero.png",
+  staffHeroPhoto: "/images/heroes/staff-hero-photo.jpg",
   galleryHero: "/images/heroes/gallery-hero.png",
   faqHero: "/images/heroes/faq-hero.png",
   facilityOverview: "/images/facility-overview.png",

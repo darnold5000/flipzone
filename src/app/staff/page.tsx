@@ -1,9 +1,8 @@
-import { BannerHero } from "@/components/BannerHero";
+import { StaffHero } from "@/components/staff/StaffHero";
 import { CoachCard } from "@/components/CoachCard";
 import { CTA } from "@/components/CTA";
 import { Badge } from "@/components/ui/badge";
 import { staff, staffProfilePreviews } from "@/data/staff";
-import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -16,12 +15,7 @@ export const metadata = createMetadata({
 export default function StaffPage() {
   return (
     <>
-      <BannerHero
-        src={images.staffHero}
-        alt="Meet the Team Behind the Magic — experienced coaches who love helping kids shine"
-        width={1024}
-        height={156}
-      />
+      <StaffHero />
 
       <section className="section-padding border-b border-border bg-flip-purple/5">
         <div className="container-wide">
