@@ -18,6 +18,7 @@ export const images = {
   hero: "/images/hero-team.png",
   heroTeam: "/images/hero-team.png",
   aboutHero: "/images/about-hero.png",
+  aboutHeroPhoto: "/images/heroes/about-hero-photo.jpg",
   programsHero: "/images/heroes/programs-hero.png",
   programsHeroPhoto: "/images/heroes/programs-hero-photo.png",
   staffHero: "/images/heroes/staff-hero.png",
