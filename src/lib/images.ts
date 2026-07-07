@@ -25,6 +25,7 @@ export const images = {
   galleryHero: "/images/heroes/gallery-hero.png",
   galleryHeroPhoto: "/images/heroes/gallery-hero-photo.jpg",
   faqHero: "/images/heroes/faq-hero.png",
+  contactHero: "/images/heroes/contact-hero.jpg",
   facilityOverview: "/images/facility-overview.png",
   facilityGymFloor: "/images/facility-gym-floor.png",
   facilityBeams: "/images/facility-beams.png",

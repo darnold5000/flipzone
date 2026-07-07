@@ -23,10 +23,10 @@ export default function ContactPage() {
   return (
     <>
       <BannerHero
-        src={images.faqHero}
-        alt="We're Here to Help — have questions or ready to get started at The Flip Zone"
-        width={1024}
-        height={237}
+        src={images.contactHero}
+        alt="The Flip Zone gymnastics facility in Plainfield, Indiana"
+        width={640}
+        height={456}
       />
 
       <section className="section-padding">
