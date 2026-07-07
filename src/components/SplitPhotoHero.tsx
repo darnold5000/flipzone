@@ -22,7 +22,7 @@ export function SplitPhotoHero({
 }: SplitPhotoHeroProps) {
   return (
     <section className={cn("overflow-hidden", className)}>
-      <div className="lg:grid lg:min-h-[360px] lg:grid-cols-[minmax(0,44%)_1fr] xl:min-h-[400px]">
+      <div className="lg:grid lg:h-[400px] lg:grid-cols-[minmax(0,44%)_1fr]">
         <div className="relative z-10 flex items-center bg-gradient-to-br from-flip-purple via-flip-purple to-[#3a2168] px-5 py-10 sm:px-8 lg:px-10 xl:px-12">
           <motion.div
             initial={{ opacity: 0, y: 16 }}

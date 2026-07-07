@@ -100,6 +100,17 @@ export function Footer() {
 
       <div className="border-t border-white/10 py-6 text-center text-sm text-white/60">
         <p>&copy; {new Date().getFullYear()} The Flip Zone. All rights reserved.</p>
+        <p className="mt-2">
+          Website built &amp; maintained by{" "}
+          <a
+            href="https://www.hiresignalworks.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/80 transition-colors hover:text-white"
+          >
+            Signal Works
+          </a>
+        </p>
       </div>
     </footer>
   );
