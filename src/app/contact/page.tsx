@@ -1,4 +1,4 @@
-import { BannerHero } from "@/components/BannerHero";
+import { ContactHero } from "@/components/contact/ContactHero";
 import { LocationMap } from "@/components/LocationMap";
 import { CTA } from "@/components/CTA";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/button";
@@ -8,7 +8,6 @@ import {
   MailLetterIcon,
   PhoneCallIcon,
 } from "@/components/icons/ContactLinkIcons";
-import { images } from "@/lib/images";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
@@ -22,12 +21,7 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <>
-      <BannerHero
-        src={images.contactHero}
-        alt="The Flip Zone gymnastics facility in Plainfield, Indiana"
-        width={640}
-        height={456}
-      />
+      <ContactHero />
 
       <section className="section-padding">
         <div className="container-wide">
