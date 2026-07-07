@@ -7,7 +7,6 @@ export function ContactHero() {
       image={images.contactHero}
       imageAlt="The Flip Zone gymnastics facility in Plainfield, Indiana"
       imagePosition="center 40%"
-      size="compact"
     >
       <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-flip-teal">
         Contact Us

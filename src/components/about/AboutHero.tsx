@@ -9,7 +9,6 @@ export function AboutHero() {
       image={images.aboutHeroPhoto}
       imageAlt="Flip Zone gymnasts celebrating in front of a purple balloon arch"
       imagePosition="center 45%"
-      size="compact"
     >
       <p className="mb-2 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-flip-teal">
         <Sparkles className="size-4 shrink-0" />
