@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import { BannerHero } from "@/components/BannerHero";
+import { GalleryHero } from "@/components/gallery/GalleryHero";
 import { CTA } from "@/components/CTA";
 import { galleryCategories, type GalleryCategory } from "@/data/gallery";
-import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export function GalleryContent() {
@@ -19,12 +18,7 @@ export function GalleryContent() {
 
   return (
     <>
-      <BannerHero
-        src={images.galleryHero}
-        alt="Moments That Matter — memories from first cartwheels to big victories at The Flip Zone"
-        width={1024}
-        height={164}
-      />
+      <GalleryHero />
 
       <section className="section-padding">
         <div className="container-wide">

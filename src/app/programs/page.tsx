@@ -1,8 +1,7 @@
-import { BannerHero } from "@/components/BannerHero";
+import { ProgramsHero } from "@/components/programs/ProgramsHero";
 import { ClassFinder } from "@/components/ClassFinder";
 import { ProgramsCatalog } from "@/components/ProgramsCatalog";
 import { CTA } from "@/components/CTA";
-import { images } from "@/lib/images";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -15,12 +14,7 @@ export const metadata = createMetadata({
 export default function ProgramsPage() {
   return (
     <>
-      <BannerHero
-        src={images.programsHero}
-        alt="Programs for Every Stage — from first steps to competitive excellence at The Flip Zone"
-        width={1024}
-        height={231}
-      />
+      <ProgramsHero />
 
       <ClassFinder />
 
