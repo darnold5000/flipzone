@@ -40,6 +40,7 @@ export function createMetadata({
     alternates: {
       canonical: url,
     },
+    robots: { index: false, follow: false },
   };
 }
 
